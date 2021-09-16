@@ -1,5 +1,6 @@
 public class Account_New_Controller
-{
+{ 
+    // git changes adding to feature branch2
     public account acc{set;get;}
     public Account_New_Controller(apexpages.StandardController controller)
     {
