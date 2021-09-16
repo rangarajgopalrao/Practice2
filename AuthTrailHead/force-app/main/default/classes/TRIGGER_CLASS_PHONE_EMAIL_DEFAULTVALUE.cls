@@ -1,0 +1,3 @@
+public class TRIGGER_CLASS_PHONE_EMAIL_DEFAULTVALUE {
+
+}

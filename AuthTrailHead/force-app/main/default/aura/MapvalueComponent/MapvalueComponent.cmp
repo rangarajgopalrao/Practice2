@@ -1,0 +1,7 @@
+<aura:component controller="Mapvalue">
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="mapz" type="map"/>
+    {!v.mapz.key1}
+    {!v.mapz.key2}
+    {!v.mapz.key3}
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component controller="forceRecordConceptApexController" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="firstname" type="string"/>
+    <aura:attribute name="lastname" type="string"/>
+    <lightning:input label="Enter Lastname" value="{!v.lastname}"/>
+    <lightning:input label="Enter Firstname" value="{!v.firstname}"/>
+    <lightning:button label="addContact" onclick="{!c.save}"/>
+	
+</aura:component>

@@ -1,0 +1,18 @@
+<apex:page showHeader="false" sidebar="false" >
+    <apex:image url="https://www.hrkatha.com/wp-content/uploads/2018/06/3138c7366a6ecdf59187027501010d24-696x391.jpg"/>
+    
+    <apex:image value="{!$Resource.spj}" />
+    <p> </p>
+    <apex:outputLink value="https://www.flipkart.com/" target="_blank">
+        Click here to go to Flipkart home page
+   </apex:outputLink>
+    
+    <apex:tabPanel >
+        <apex:tab label="AAAAAA">
+            </apex:tab>
+        <apex:tab label="BBBBBB">
+            <apex:iframe src="https://www.salesforce.com/in/" frameborder="false"/>
+       
+      </apex:tab> 
+   </apex:tabPanel>
+</apex:page>

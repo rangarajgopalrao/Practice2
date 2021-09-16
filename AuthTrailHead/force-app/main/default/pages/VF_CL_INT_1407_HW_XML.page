@@ -1,0 +1,3 @@
+<apex:page controller="CL_INT_1407_HW_XML">
+    {!xmlstring}
+</apex:page>

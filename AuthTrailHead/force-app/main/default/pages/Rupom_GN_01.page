@@ -1,0 +1,13 @@
+<apex:page controller="Rupom_GN_01">
+    <apex:form >
+       enter the first number : <apex:inputText value="{!N1}"/>
+        <p> </p>
+        enter the second number : <apex:inputText value="{!N2}"/>
+        <p> </p>
+        enter the third number : <apex:inputText value="{!N3}"/>
+        <p> </p>
+        <apex:commandButton value="calculate" action="{!Greater_Number}"/>
+        <p> </p>
+         <apex:inputText value="{!R}"/>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,40 @@
+<aura:component controller="LT_7_1_CreateAccount">
+    <aura:attribute name="name" type="string"/>
+    <aura:attribute name="phone" type="string"/>
+    <aura:attribute name="fax" type="string"/>
+    <aura:attribute name="industry" type="string"/>
+    <aura:attribute name="rating" type="string"/>
+    <aura:attribute name="result" type="string"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <lightning:card iconName="standard:account">
+        <aura:set attribute="title">
+            <h1>Account</h1>
+            <h2>New Acount</h2>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="Save" onclick="{!c.callme}"/>
+                <lightning:button label="Cancel" onclick="{!c.show}"/>
+            </lightning:buttongroup>
+        </aura:set>
+        <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:Input label="name" value="{!v.name}"/>
+                <lightning:Input label="phone" value="{!v.phone}"/>
+                <lightning:Input label="fax" value="{!v.fax}"/>
+                <lightning:Input label="industry" value="{!v.industry}"/>
+                <lightning:Input label="rating" value="{!v.rating}"/>
+            </lightning:layoutItem>
+            
+            <aura:if isTrue="{!v.flag}">
+                <lightning:layoutItem size="6" padding="around-small">
+                    <div class="Box">
+                        Result  : {!v.result}  <br/><br/>
+                        Name    : {!v.name}    <br/><br/>
+                        Phone   : {!v.phone}   <br/><br/>
+                    </div>
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

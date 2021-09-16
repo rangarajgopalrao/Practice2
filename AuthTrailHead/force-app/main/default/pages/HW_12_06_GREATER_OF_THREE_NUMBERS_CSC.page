@@ -1,0 +1,52 @@
+<apex:page id="P1">
+    <script>
+    function greaterofnumbers()
+    {
+       var num1, num2, num3;
+		num1 = Number(document.getElementById("{!$Component.P1.F1.PB1.PBS1.PBSI1.IT1}").value);
+		num2 = Number(document.getElementById("{!$Component.P1.F1.PB1.PBS2.PBSI2.IT2}").value);
+		num3 = Number(document.getElementById("{!$Component.P1.F1.PB1.PBS3.PBSI3.IT3}").value);
+
+		if(num1>num2 && num1>num3)
+		{
+			alert(num1+"-is greatest");
+		}
+		else if(num2>num3)
+		{
+			alert(num2+"-is greatst");
+		}
+		else
+		{
+			alert(num3+"-is greatest");
+		}
+    }
+    </script>
+ <apex:form id="F1">
+     <apex:pageBlock title="Greater of 3 numbers" id="PB1">
+         <apex:pageBlockSection id="PBS1">
+             
+             <apex:pageBlockSectionItem id="PBSI1">
+                 <apex:outputLabel value="Enter first number:" id="N1"/>
+                 <apex:inputText id="IT1"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem id="PBSI2">
+                 <apex:outputLabel value="Enter second number:" id="N2"/>
+                 <apex:inputText id="IT2"/>
+             </apex:pageBlockSectionItem>
+             
+            <apex:pageBlockSectionItem id="PBSI3">
+                 <apex:outputLabel value="Enter third number:" id="N3"/>
+                 <apex:inputText id="IT3"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem id="PBSI4">
+                 <apex:outputLabel value="Result:" id="OL4"/>
+                 <apex:inputText id="IT4"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:commandButton value="Calculator"  onclick="greaterofnumbers" id="CB1"/>
+         </apex:pageBlockSection>
+     </apex:pageBlock>
+    </apex:form>   
+</apex:page>

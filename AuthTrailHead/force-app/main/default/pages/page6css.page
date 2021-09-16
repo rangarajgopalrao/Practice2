@@ -1,0 +1,26 @@
+<apex:page showHeader="false" sidebar="false">
+    <apex:stylesheet value="{!$Resource.cmnst}"/> 
+<h1>Welcome to Spice Jet</h1>   
+    
+<div class="box">    
+ <apex:form style="border-style: dashed;border-width: 3px;border-color: green;">
+     
+    
+             <apex:outputLabel value="Enter Lenght :" styleClass="Rupom" />
+             <apex:inputText style="background-color: green;" />
+     
+             <p> </p>
+     
+             <apex:outputLabel value="Enter Bredth :" styleClass="Rupom" />
+             <apex:inputText style="background-color: green;"/>
+     
+            <p> </p>
+     
+            <apex:commandButton value="Calculate" style="border-color: Blue;
+            border-width: 3px;
+            color:#0FF20F;
+            margin-left: 10px;"/>
+      
+ </apex:form> 
+</div>
+</apex:page>

@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="EmpName" type="string"/>
+    <aura:attribute name="EmpSal" type="decimal" default="25000"/>
+    <aura:attribute name="EmpCity" type="string" default="chennai"/>
+    <aura:attribute name="EmpDob" type="date"/>
+    <lightning:card title="Employee Details" iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:button label="submit" iconName="standard:account" onclick="{!c.show}"/>
+        </aura:set>
+        <lightning:input label="Enter Employee Name" value="{!v.EmpName}"/>
+        <lightning:input label="Enter Employee Salary" value="{!v.EmpSal}"/>
+        <lightning:input label="Enter Employee City" value="{!v.EmpCity}"/>
+        <lightning:input label="Enter Employee DOB" value="{!v.EmpDob}"/>
+    </lightning:card>
+</aura:component>

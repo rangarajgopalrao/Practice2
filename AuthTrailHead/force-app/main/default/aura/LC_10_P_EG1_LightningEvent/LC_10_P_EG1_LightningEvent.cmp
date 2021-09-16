@@ -1,0 +1,16 @@
+<aura:component >
+    
+    <aura:handler name="Firstevent" event="c:LE_10_EG1_LightningEvent" action="{!c.callme}"/>
+    
+    <aura:attribute name="StdName" type="string"/>
+    
+    <lightning:card title="Parent">
+        This is parent component  <p/>
+        This is parent component  <p/>
+        This is parent component  <p/>
+        Name  : {!v.StdName}      <p/>
+    </lightning:card>
+    
+    <c:LC_10_C_EG1_LightningEvent/>
+    
+</aura:component>

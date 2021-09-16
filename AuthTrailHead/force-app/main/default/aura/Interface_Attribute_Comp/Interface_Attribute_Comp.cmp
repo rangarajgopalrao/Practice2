@@ -1,0 +1,8 @@
+<aura:component implements="c:Interface_Attribute">
+	<lightning:card title="interface component">
+        Name of Employee : {!v.EmpName} <br/><br/>
+        Age  of Employee : {!v.EmpAge} <br/><br/>
+        
+        <lightning:button label="submit" onclick="{!c.show}"/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="flag" type="Boolean" default="true"/>
+    <aura:if isTrue="{!v.flag}">
+    <lightning:card title="If Else Component Controller">
+        <aura:set attribute="actions">
+        <lightning:button label="mul" onclick="{!c.mul}"/>
+        <lightning:button label="add" onclick="{!c.add}"/>
+       </aura:set>
+        <lightning:input label="first number" required="true" aura:id="v1"/>
+        <lightning:input label="second number" required="true" aura:id="v2"/>
+        <lightning:input label="result" aura:id="v3"/>
+   </lightning:card>
+ </aura:if>
+</aura:component>

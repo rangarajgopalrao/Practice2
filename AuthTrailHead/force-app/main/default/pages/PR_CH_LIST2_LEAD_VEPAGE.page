@@ -1,0 +1,11 @@
+<apex:page controller="PR_CH_LIST2_LEAD" showHeader="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!ls}" var="l">
+                <apex:column value="{!l.name}"/>
+                <apex:column value="{!l.phone}"/>
+                <apex:column value="{!l.email}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

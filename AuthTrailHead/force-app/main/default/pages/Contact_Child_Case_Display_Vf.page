@@ -1,0 +1,17 @@
+<apex:page controller="Contact_Child_Case_Display">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:dataTable value="{!conList}" var="c" frame="border" rules="rows" cellpadding="10">
+        	<apex:column headerValue="First Name" value="{!c.firstName}"/>
+            <apex:column headerValue="Last Name" value="{!c.lastName}"/>
+            <apex:column headerValue="Phone" value="{!c.phone}"/>
+            <apex:column headerValue="Email" value="{!c.email}"/>
+            
+                <apex:dataList value="{!c.cases}" var="cs">
+                    <apex:outputText value="{!cs.subject}"></apex:outputText>
+                </apex:dataList>
+            
+        </apex:dataTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recId" type="Id"/>
+    <aura:attribute name="error" type="string"/>
+    <aura:attribute name="myFields" type="Object"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/>
+    
+    <force:recordData aura:Id="myRec" recordId="{!v.recId}" mode="VIEW" targetFields="{!v.myFields}"
+                      fields="LastName,FirstName,Phone" targetError="{!v.error}"/>
+    
+    <lightning:card iconName="standard:contact" title="New Contact">
+        <lightning:input label="LastName" value="{!v.myFields.LastName}"/>
+        <lightning:input label="FirstName" value="{!v.myFields.FirstName}"/>
+        <lightning:input label="Phone" value="{!v.myFields.Phone}"/>
+    </lightning:card>
+</aura:component>

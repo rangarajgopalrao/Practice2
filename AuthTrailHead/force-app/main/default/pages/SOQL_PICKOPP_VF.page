@@ -1,0 +1,24 @@
+<apex:page controller="SOQL_PICKOPP">
+    <apex:form >
+        <apex:pageBlock title="OPPORTUNITY">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Any Name"/>
+                    <apex:inputText value="{!searchtext}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+            <apex:pageBlock >
+                    <apex:pageBlockButtons location="bottom">
+                         <apex:commandButton value="search" action="{!find}"/>
+                   </apex:pageBlockButtons>
+           </apex:pageBlock>
+                <apex:pageBlockTable value="{!opp}" var="o" rendered="{!!isnull(opp)}">
+                    <apex:column value="{!o.name}" headerValue="name"/>
+                    <apex:column value="{!o.stagename}" headerValue="stagename"/>
+                    <apex:column value="{!o.amount}" headerValue="amount"/>
+              </apex:pageBlockTable>
+        
+            
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page Controller="DisplayCaseAttachments">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:inputText value="{!text}"/>
+            <apex:commandButton action="{!getAttachments}" value="Get"/>
+            <apex:repeat value="{!att}" var="a">
+                <apex:panelgrid columns="1">
+                    <apex:outputLink value="/{!a.Id}">View File</apex:outputLink>
+                </apex:panelgrid>
+            </apex:repeat>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

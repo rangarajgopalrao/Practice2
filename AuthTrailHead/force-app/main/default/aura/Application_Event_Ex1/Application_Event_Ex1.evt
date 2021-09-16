@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="empName" type="string"/>
+    <aura:attribute name="city" type="string"/>
+</aura:event>

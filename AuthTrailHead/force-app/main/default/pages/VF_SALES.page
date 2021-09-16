@@ -1,0 +1,11 @@
+<apex:page controller="SalesWrapperClass">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!salesWrap}" var="sw">
+                <apex:column headerValue="account name" value="{!sw.acc.name}"/>
+                <apex:column headerValue="opp amount" value="{!sw.op.stagename}"/>
+                <apex:column headerValue="contact email" value="{!sw.con.email}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

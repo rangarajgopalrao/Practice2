@@ -1,0 +1,100 @@
+<apex:page standardController="account" sidebar="false" showHeader="false" >
+        <apex:tabPanel >
+            <apex:tab label="Capture information - Tab 1" title="please capture all information">
+                <apex:form >
+                  <apex:pageBlock title="General Info">
+                        <apex:pageBlockSection title="Basic Info input" columns="2" collapsible="false">
+                            <apex:inputField value="{!Account.Name}"/>
+                            <apex:inputField value="{! Account.Phone}"/>
+                            <apex:inputField value="{! account.fax}"/>
+                            <apex:inputField value="{!account.industry}"/>
+                            <apex:inputField value="{! account.sic}"/>
+                            <apex:inputField value="{! account.billingcity}"/>
+                            <apex:inputField value="{! account.rating}"/>
+                            <apex:inputHidden value="{!Account.billingcountry}"/>
+                            <apex:inputSecret value="{!Account.Name}"/>
+                            <apex:inputFile value=""></apex:inputFile>
+                            
+                            <apex:selectRadio label="Course offered" title="Please select one course">
+                                <apex:selectOption itemLabel="SFDC" itemValue="salesforce"/>
+                                <apex:selectOption itemLabel="SAP" itemValue="SAP"/>
+                                <apex:selectOption itemLabel="Testing Tools" itemValue="TT"/>
+                                <apex:selectOption itemLabel="MS.Net" itemValue="net"/>
+                              </apex:selectRadio>
+                            
+                                <apex:selectCheckboxes label="Course offered222222222">
+                                    <apex:selectOption itemLabel="SFDC" itemValue="salesforce"/>
+                                    <apex:selectOption itemLabel="SAP" itemValue="SAP"/>
+                                    <apex:selectOption itemLabel="Testing Tools" itemValue="TT"/>
+                                    <apex:selectOption itemLabel="MS.Net" itemValue="net"/>
+                            </apex:selectCheckboxes>
+                            <apex:commandButton value="SAVEEEEE" ACtion="{!Save}"/>
+                            
+                         </apex:pageBlockSection>
+                      </apex:pageBlock>
+                    </apex:form>
+            </apex:tab>
+            
+            
+            
+            
+            
+            
+            
+          <apex:tab label="Tabbbbbb3 - Tab3">
+            </apex:tab>
+            
+            
+             <apex:tab label="contact information - Tab 2">
+                 <apex:form >
+<apex:pageBlock title="General Info">
+    <apex:pageBlockSection title="Basic Info input" columns="2" collapsible="false">
+    <apex:inputField value="{!Account.Name}"/>
+    <apex:inputField value="{! Account.Phone}"/>
+    <apex:inputField value="{! account.fax}"/>
+    <apex:inputField value="{!account.industry}"/>
+    <apex:inputField value="{! account.sic}"/>
+    <apex:inputField value="{! account.billingcity}"/>
+    <apex:inputField value="{! account.rating}"/>
+    <apex:commandButton value="SAVEEEEE" ACtion="{!Save}"/>
+    <apex:commandButton value="Deleteeee" action="{Delete}"/>
+        </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="Basic info output">
+        <apex:outputField value="{!account.Name}"/>
+        <apex:outputField value="{!account.fax}"/>
+        <apex:outputField value="{! account.industry}"/>
+        <apex:outputField value="{!account.billingcity}"/>
+        </apex:pageBlockSection>
+    
+         <apex:pageBlockSection title="Table">
+                 <apex:pageBlockTable value="{! Account.Contacts}" var="Rupom" >
+                     <apex:column value="{!Rupom.Title}"/>
+                     <apex:column value="{!Rupom.firstname}"/>
+                     <apex:column value="{!Rupom.Middle_name__c}"/>
+                     <apex:column value="{!Rupom.LastName}"/>
+                     <apex:column value="{!Rupom.Email}"/>
+                     <apex:column value="{!Rupom.MobilePhone}"/>
+                     <apex:column value="{!Rupom.phone}"/>
+                     <apex:column >
+            			<apex:facet name="header">Customer First Name</apex:facet>
+           					{!Rupom.firstname} 
+      				 </apex:column>
+                 </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+        
+<apex:pageBlock title="things that cannot do inside a form">
+   <apex:pageBlockSection title="Related list">
+   <apex:relatedList list="contacts"/>
+   <apex:relatedList list="opportunities"/>
+   <apex:relatedList list="Cases"/>
+   </apex:pageBlockSection>
+    <apex:pageBlockSection title="Details">
+            <apex:detail />
+        </apex:pageBlockSection>
+</apex:pageBlock>
+            </apex:tab>
+    </apex:tabPanel>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="SOQL_EX6">
+    <apex:form >
+        <apex:pageBlock title="Accounts">
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.industry}"/>
+                <apex:column headerValue="contacts">
+                    <apex:dataTable value="{!a.contacts}" var="b">
+                        <apex:column value="{!b.firstname}"/>
+                        <apex:column value="{!b.lastname}"/>
+                   </apex:dataTable>
+               </apex:column>
+                <apex:column headerValue="opportunity">
+                    <apex:dataTable value="{!a.opportunities}" var="c">
+                        <apex:column value="{!c.name}"/>
+                        <apex:column value="{!c.stagename}"/>
+                   </apex:dataTable>
+               </apex:column>
+                <apex:column headerValue="Case">
+                    <apex:dataTable value="{!a.cases}" var="d">
+                        <apex:column value="{!d.subject}"/>
+                        <apex:column value="{!d.status}"/>
+                   </apex:dataTable>
+               </apex:column>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page controller="Sathish_SchlorObject_List_EX">
+    <apex:form id="f1">
+        <apex:pageBlock title="Scholar add and clear">
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!s.First_Name__c}"/>
+                <apex:inputField value="{!s.Last_Name__c}"/>
+                <apex:inputField value="{!s.Phone__c}"/>
+                <apex:inputField value="{!s.Email__c}"/>
+                <apex:inputField value="{!s.City__c}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlockSection rendered="{!SL.size>0}">
+                <apex:pageBlockTable value="{!Sl}" var="s">
+                    <apex:column value="{!s.First_Name__c}"/>
+                    <apex:column value="{!s.Last_Name__c}"/>
+                    <apex:column value="{!s.Phone__c}"/>
+                    <apex:column value="{!s.Email__c}"/>
+                    <apex:column value="{!s.City__c}"/>
+               </apex:pageBlockTable>
+           </apex:pageBlockSection>
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Add and Save" action="{!addscholar}" reRender="f1"/>
+                <apex:commandButton value="Clear" action="{!clearrecord}" reRender="f1"/>
+           </apex:pageBlockButtons>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

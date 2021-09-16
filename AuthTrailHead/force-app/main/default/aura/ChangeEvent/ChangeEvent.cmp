@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="ChangeName" type="String" default="Text1"/>
+    <aura:handler name="change" value="{!v.ChangeName}" action="{!c.showme}"/>
+    <lightning:input name="changed name" label="Enter Name" value="{!v.ChangeName}"/>
+</aura:component>

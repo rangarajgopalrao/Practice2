@@ -1,0 +1,39 @@
+<apex:page controller="CL_19DAY_RUPOM">
+    NAME : {!NAME}
+    <p> </p>
+    Living City : {!city}
+    <p> </p>
+    Employ salary : {!salary}
+    <p> </p>
+    is valid candidate : {!genuinecandidate}
+    
+    <p></p>
+    Account name : {!Ac1.name}
+    <p></p>
+    Account phone : {!Ac1.phone}
+    <p></p>
+    Account industry : {!Ac1.industry}
+    <p></p>
+    Account fax : {!Ac1.fax}
+    <p></p>
+    Account rating : {!Ac1.rating}
+    
+    <p></p>
+    passenger reg id : {!pus.name}
+    <p></p>
+    passenger first name : {!pus.First_name__c}
+    <p></p>
+    passenger last name : {!pus.Last_name__c}
+    <p></p>
+    passenger mobile : {!pus.Mobile_number__c}
+    <p></p>
+    passenger phone : {!pus.phone__c}
+    <p></p>
+    
+    <apex:dataTable value="{!Acc}" var="a">
+        <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.phone}"/>
+        <apex:column value="{!a.fax}"/>
+        <apex:column value="{!a.rating}"/>
+   </apex:dataTable>
+</apex:page>

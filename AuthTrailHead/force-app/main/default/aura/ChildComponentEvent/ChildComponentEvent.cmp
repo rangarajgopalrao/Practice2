@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="regInChild" type="c:ComponentEvent"/>
+    <aura:attribute name="textMessage" type="string" default="Part from child comp"/>
+    <lightning:button label="Click To Fire" onclick="{!c.ChildFireButton}"/>
+</aura:component>

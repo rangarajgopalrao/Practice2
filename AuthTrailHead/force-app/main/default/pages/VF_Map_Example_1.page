@@ -1,0 +1,15 @@
+<apex:page controller="Map_Example_1">
+    <apex:form >
+        <apex:inputText value="{!accName}" />
+        <apex:commandButton value="Go" action="{!search}" />
+        <br/><br/>
+        <apex:pageBlock title="MapExample" rendered="{! !ISNULL(contacts)}">
+        	<apex:pageBlockTable value="{!contacts}" var="a">
+                <apex:column value="{!a.lastname}" />
+                <apex:column value="{!a.firstname}" />
+                <apex:column value="{!a.phone}" />
+                <apex:column value="{!a.email}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="SOSL_EX2">
+    <apex:form >
+        <apex:pageBlock title="Particular one field Records">
+            <apex:pageBlockTable value="{!ac}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.industry}"/>
+                <apex:column value="{!a.rating}"/>
+           </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!op}" var="p">
+                <apex:column value="{!p.name}"/>
+                <apex:column value="{!p.account.id}"/>
+                <apex:column value="{!p.stagename}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<aura:component >
+    <c:Application_Event_Ex1_Child_1/>
+    <c:Application_Event_Ex1_Child_2/>
+    <c:Application_Event_Ex1_Child_3/>
+</aura:component>

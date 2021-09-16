@@ -1,0 +1,30 @@
+<apex:page controller="Sathis_Acc_Con_combo_class2">
+    <apex:form id="fm">
+      <apex:pageBlock title="Account Contact Combination">
+          <apex:pageBlockSection columns="2" title="account">
+              <apex:inputField value="{!com.a.name}"/>
+              <apex:inputField value="{!com.a.phone}"/>
+              <apex:inputField value="{!com.a.industry}"/>
+              <apex:inputField value="{!com.a.rating}"/>
+        </apex:pageBlockSection>
+          <apex:pageBlockSection columns="2" title="contact">
+              <apex:inputField value="{!com.c.firstname}"/>
+              <apex:inputField value="{!com.c.lastname}"/>
+        </apex:pageBlockSection>
+                  
+                 
+              <apex:pageBlockTable value="{!Combination}" var="co">
+                  <apex:column value="{!co.a.name}"/>
+                  <apex:column value="{!co.a.phone}"/>
+                  <apex:column value="{!co.a.industry}"/>
+                  <apex:column value="{!co.a.rating}"/>
+                  <apex:column value="{!co.c.firstname}"/>
+                  <apex:column value="{!co.c.lastname}"/>
+             </apex:pageBlockTable>
+          <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Save and Add" action="{!addme}" reRender="fm"/>
+            <apex:commandButton value="Clear" action="{!clearall}" reRender="fm"/>
+         </apex:pageBlockButtons>
+     </apex:pageBlock>
+   </apex:form>
+</apex:page>

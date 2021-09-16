@@ -1,0 +1,34 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection title="area cla" columns="3">
+          
+           <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Length :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Bredth :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Height :" />
+                    <apex:inputText />
+                  </apex:pageBlockSectionItem> 
+                 <apex:selectRadio label="fac">
+                    <apex:selectOption itemLabel="Rectangle" itemValue="Rect" />
+                    <apex:selectOption itemLabel="Triangle" itemValue="Tri" />
+                    <apex:selectOption itemLabel="Trapzium" itemValue="Trap" />
+                </apex:selectRadio>
+                     
+                     <apex:commandButton value="Calculate" action="{MainShape}"/>
+            
+                <apex:pageBlockSectionItem id="Pbs2">
+                    <apex:outputLabel value="The Result Is :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+            
+     </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

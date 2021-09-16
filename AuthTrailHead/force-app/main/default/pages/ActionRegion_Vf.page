@@ -1,0 +1,22 @@
+<apex:page controller="ActionRegion">
+    <apex:form >
+        <apex:pageBlock id="pb">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel >
+                        <apex:outputLabel value="enter name"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel >
+                        <apex:actionRegion >
+                            <apex:inputText value="{!conName}"/> &nbsp;&nbsp;
+                            <apex:commandButton action="{!retrieveContactRecord}" value="search" reRender="pb"/>
+                        </apex:actionRegion>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!contacts.name}"/>
+                <apex:inputField value="{!contacts.email}"/>
+                <apex:inputField value="{!contacts.accountid}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,39 @@
+<apex:page sidebar="false" showHeader="false">
+    <style>
+        body
+        {
+        color: black;
+        }
+        h1
+        {
+        color:Pink;
+        }
+    </style>
+    <apex:form >
+        <apex:tabPanel >
+            <apex:tab label="quick recharge">
+          <apex:pageBlock title="quick online recharge">
+              <apex:pageBlockSection title="recharge your account instantly and enjoy uninterrupted TV experience">
+                  <apex:selectRadio >
+                      <apex:selectOption itemLabel="Registered mobile number" itemValue="Registered mn"/>
+                      <apex:selectOption itemLabel="smart card/CDSN number" itemValue="smart card/CDSN"/>
+                      <apex:selectOption itemLabel="CR-ID number" itemValue="CR-ID"/>
+                 </apex:selectRadio>
+                  <p> </p>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel value="enter number"/>
+                      <apex:inputText />
+                 </apex:pageBlockSectionItem>
+             </apex:pageBlockSection>
+              <apex:commandButton value="submit" action="submit" style="back ground:yellow;border:red;color:green"/>
+         </apex:pageBlock>
+        </apex:tab>
+            <apex:tab label="customer support"/>
+  </apex:tabPanel>
+    
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

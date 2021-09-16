@@ -1,0 +1,33 @@
+<apex:page controller="DML_EX3">
+    <apex:form >
+        <apex:pageBlock title="ACCOUNT CONTACT RELATION">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!create}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection title="account">
+                <apex:inputText value="{!acc.name}"/>
+                 <apex:inputText value="{!acc.phone}"/>
+                 <apex:inputText value="{!acc.industry}"/>
+                 <apex:inputText value="{!acc.rating}"/>
+           </apex:pageBlockSection>
+            <br/><br/>
+            <apex:pageBlockTable value="{!con}" var="a" id="one">
+                <apex:column headerValue="Last name">
+                    <apex:inputText value="{!a.lastname}"/>
+               </apex:column>
+                <apex:column headerValue="First name">
+                    <apex:inputText value="{!a.firstname}"/>
+               </apex:column>
+                <apex:column headerValue="Phone">
+                    <apex:inputText value="{!a.phone}"/>
+               </apex:column>
+                <apex:column headerValue="email">
+                    <apex:inputText value="{!a.email}"/>
+               </apex:column>
+                <apex:column headerValue="add">
+                    <apex:commandButton value="add" action="{!add}" reRender="one"/>
+               </apex:column>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

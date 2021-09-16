@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable" controller="AccountListController_DataTable">
+	<aura:attribute type="Account[]" name="acctList"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="selectedAccts" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <div class="slds-box slds-theme_default">
+        
+        <lightning:datatable data="{! v.acctList }" 
+                             columns="{! v.mycolumns }" 
+                             keyField="id"
+                             onrowselection="{!c.handleSelect}"/>
+        <br/>
+        <center>
+            <lightning:button onclick="{!c.showSelectedName}" label="Show" variant="brand"/>
+        </center>
+        
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component controller="SSC_11_CreateAccAndList">
+    <aura:attribute name="Accounts" type="List" default="[]"/>
+    <aura:attribute name="fields" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.callme}"/>
+    <aura:handler name="GopalEvt" event="c:LE_11_EG1_AccountList" action="{!c.showme}"/>
+    
+    <c:LC_11_EG1_C_AccountList/>
+    
+    <br/><br/>
+    <lightning:datatable keyField="id" data="{!v.Accounts}" columns="{!v.feilds}" hideCheckboxColumn="false"/>
+</aura:component>

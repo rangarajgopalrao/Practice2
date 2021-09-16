@@ -1,0 +1,22 @@
+<apex:page controller="CONST_PRAC_OPP">
+    <apex:form >
+        <apex:pageBlock title="Create Opportunity">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!O.Name}"/>
+                 <apex:inputField value="{!O.Closedate}"/>
+                <apex:inputField value="{!O.Leadsource}"/>
+                <apex:inputField value="{!O.Type}"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Opportunity name"/>
+                    <apex:inputText value="{!O.Name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Close date"/>
+                    <apex:inputText value="{!O.closedate}"/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Saveeeeeeeeeeeeeee" action="{!saveop}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

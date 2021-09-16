@@ -1,0 +1,15 @@
+<apex:page controller="CH_WRAPPER_EMPLOYEE_INFORM_EX1">
+    <apex:form >
+        <apex:pageBlock title="Employee">
+            <apex:pageBlockTable value="{!empdtl}" var="ew">
+                <apex:column headerValue="Select">
+                    <apex:inputCheckbox value="{!ew.flag}"/>
+                </apex:column>
+                <apex:column headerValue="Employee Name" value="{!ew.name}"/>
+                <apex:column headerValue="Employee Salary" value="{!ew.salary}"/>
+                <apex:column headerValue="Employee Phone" value="{!ew.phone}"/>
+                <apex:column headerValue="Employee Experience" value="{!ew.experience}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page controller="CL_INT_1707_XML_Eg1_XMLDserfromFile">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:inputFile value="{!xmlfile}" fileName="dummyfile"/>
+            <apex:commandButton value="convert" action="{!XMLDserfromFile}"/>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

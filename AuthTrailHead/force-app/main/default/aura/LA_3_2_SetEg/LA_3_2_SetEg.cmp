@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="EmpName" Type="String"/>
+    <aura:attribute name="EmpExp" Type="integer" default="3"/>
+    <aura:attribute name="EmpSalary" Type="decimal"/>
+    <aura:handler name="init" value="{!this}" action="{!c.call}"/>
+    
+        <lightning:card title="emp details">
+          Employee name   :{!v.EmpName}   <br></br>
+          Employee exp    :{!v.EmpExp}    <br></br>
+          Employee salary :{!v.EmpSalary} <br></br>
+     </lightning:card>
+   
+</aura:component>

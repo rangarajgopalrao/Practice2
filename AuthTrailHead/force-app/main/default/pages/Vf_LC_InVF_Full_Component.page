@@ -1,0 +1,32 @@
+<apex:page >
+    <apex:includeLightning />
+    <apex:form >
+        <apex:pageBlock title="VF page component">
+            <apex:pageBlockSection title="Emp details on vf page">
+                <apex:inputText label="Enter name"/>
+                <apex:inputText label="Enter age"/>
+                <p></p>
+                <apex:commandButton value="submittt"/>
+            </apex:pageBlockSection>
+        
+   			 <apex:pageBlockSection title="Emp details on lightning page" columns="1">
+        			<div id="third component">
+        		</div>		
+            </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+    <script>
+              $Lightning.use("c:LC_InVF_Full_Component_App",function(){
+                   $Lightning.createComponent("c:LC_InVF_Full_Component",
+                                              {
+                                                  "EmpName":"R GOPAL RAO"
+                                              },
+                                              "third component",
+                                              function(cmp){
+                                                  cmp.set("v.EmpSal",50000);
+                                                  cmp.set("v.EmpCity","Hyderabad");
+                                              }
+                                             );
+              });
+    </script>
+</apex:page>

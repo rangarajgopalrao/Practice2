@@ -1,0 +1,43 @@
+<aura:component >
+	<lightning:layout multipleRows="true">
+        <lightning:layoutItem size="12">
+           <lightning:card title="gopal">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="8">
+           <lightning:card title="Nandu">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="4">
+           <lightning:card title="rupom">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="6">
+           <lightning:card title="contact">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="6">
+           <lightning:card title="account">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="4">
+           <lightning:card title="ganesh">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="4">
+           <lightning:card title="ramesh">
+          </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="4">
+           <lightning:card title="ramya">
+          </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

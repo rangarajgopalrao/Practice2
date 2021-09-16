@@ -1,0 +1,9 @@
+<aura:component controller="Account_Contact_Ex2">
+    <aura:registerevent name="Myacc" type="c:Acc_Con_Event"/>
+    
+    <lightning:input label="Name" aura:id="name"/>
+    <lightning:input label="Phone" aura:id="phone"/>
+    <lightning:input label="Rating" aura:id="rating"/>
+    
+    <lightning:button label="Submit" onclick="{!c.show}"/>
+</aura:component>

@@ -1,0 +1,14 @@
+<apex:page controller="ShowAttachmentController" sidebar="false">
+    <apex:form >
+        <apex:pageblock > 
+            <apex:pageBlockTable value="{!contactAttachment}" var="att">
+                <apex:column value="{!att.name}"/>
+                <apex:column value="{!att.ParentId}"/>
+                <apex:column value="{!att.OwnerId}"/>
+                <apex:column value="{!att.ContentType}"/>
+                <apex:column value="{!att.CreatedDate}"/>
+                <apex:column value="{!att.Description}"/>
+            </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

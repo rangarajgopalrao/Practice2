@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableforallpagetypes" access="global">
+    <aura:attribute name="userId" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    current user Id : {!v.userid}
+</aura:component>

@@ -1,0 +1,24 @@
+<apex:page controller="SATHISH_AccountInfo">
+    <apex:form id="fm">
+      <apex:pageBlock title="Account record add and clear">
+          <apex:pageBlockSection columns="2" >
+              <apex:inputField value="{!a.name}"/>
+              <apex:inputField value="{!a.phone}"/>
+              <apex:inputField value="{!a.industry}"/>
+              <apex:inputField value="{!a.rating}"/>
+        </apex:pageBlockSection>
+          <apex:pageBlockSection rendered="{!acc.size>0}">
+              <apex:pageBlockTable value="{!Acc}" var="ac">
+                  <apex:column value="{!ac.name}"/>
+                  <apex:column value="{!ac.phone}"/>
+                  <apex:column value="{!ac.industry}"/>
+                  <apex:column value="{!ac.rating}"/>
+             </apex:pageBlockTable>
+         </apex:pageBlockSection>
+          <apex:pageBlockButtons location="top">
+            <apex:commandButton value="Save and Add" action="{!addvalue}" reRender="fm"/>
+            <apex:commandButton value="Clear" action="{!vanishrecord}" reRender="fm"/>
+         </apex:pageBlockButtons>
+     </apex:pageBlock>
+   </apex:form>
+</apex:page>

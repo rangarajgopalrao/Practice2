@@ -1,0 +1,14 @@
+<aura:component >
+	<lightning:card title="Calculator" iconName="utility:all">
+        <lightning:input label="Enter A value" aura:id="aval"/>
+        <lightning:input label="Enter B value" aura:id="bval"/>
+        <lightning:input label="Result" aura:id="res"/>
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="Add" aura:id="add" onclick="{!c.callme}"/>
+                <lightning:button label="Mul" aura:id="mul" onclick="{!c.callme}"/>
+                <lightning:button label="Reset" aura:id="reset" onclick="{!c.callme}"/>
+            </lightning:buttongroup>
+        </aura:set>
+    </lightning:card>
+</aura:component>

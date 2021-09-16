@@ -1,0 +1,16 @@
+<apex:page controller="SOQL_EX5_PICKLIST_SATHISH">
+    <apex:form >
+        <apex:pageBlock title="Account Picklist">
+            <apex:selectList size="1" value="{!selected}">
+                <apex:selectOptions value="{!options}"/>
+                <apex:actionSupport action="{!search}" event="onchange"/>
+           </apex:selectList>
+            <apex:pageBlockTable value="{!acc}" var="a" rendered="{! !ISNULL(acc)}">
+                <apex:column headerValue="Name" value="{!a.name}"/>
+                <apex:column headerValue="Industry" value="{!a.industry}"/>
+                <apex:column headerValue="Phone" value="{!a.Phone}"/>
+                <apex:column headerValue="Rating" value="{!a.rating}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

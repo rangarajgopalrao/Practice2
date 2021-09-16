@@ -1,0 +1,76 @@
+<apex:page controller="GRAND_FINAL_CAL_01" showHeader="false" sidebar="false">
+    <apex:form id="refresh">
+    <apex:pageBlock title="@@CALCULATOR@@">
+        <apex:pageBlockSection title="AREA" columns="2">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="LENGTH : "/>
+                <apex:inputText value="{!L}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:selectRadio value="{!CHS}" >
+                <apex:selectOption itemLabel="RECTANGLE" itemValue="RECT"/>
+                <apex:selectOption itemLabel="TRIANGLE" itemValue="TRI"/>
+                <apex:selectOption itemLabel="TRAPEZIUM" itemValue="TRAP"/>
+           </apex:selectRadio>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="WIDTH : "/>
+            	<apex:inputText value="{!B}"/>     
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="RESULT : "/>
+                <apex:inputText value="{!R}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="HEIGHT : "/> 
+                <apex:inputText value="{!H}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:commandButton value="CALCULATE" action="{!AREARTT}" reRender="refresh"/>
+            
+       </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="SUM EV or OD" columns="2">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="NUMBER : "/>
+                <apex:inputText value="{!Num}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:selectRadio value="{!CH}">
+                <apex:selectOption itemLabel="EVEN" itemValue="EV"/>
+                <apex:selectOption itemLabel="ODD" itemValue="OD"/>
+                <apex:selectOption itemLabel="NONE" itemValue="NN"/>
+           </apex:selectRadio>
+            
+            <apex:commandButton value="CALCULATE" action="{!SEO}" reRender="refresh"/>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="sum of even/odd result is : "/>
+                <apex:inputText value="{!RESULT}"/>
+           </apex:pageBlockSectionItem>
+            
+            
+       </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="FACTORIAL">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="NUMBER : "/>
+                <apex:inputText value="{!Num}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="RESULT : "/>
+                <apex:inputText value="{!RF}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:commandButton value="CALCULATE" action="{!mainfact}" reRender="refresh"/>
+            
+       </apex:pageBlockSection>
+        
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

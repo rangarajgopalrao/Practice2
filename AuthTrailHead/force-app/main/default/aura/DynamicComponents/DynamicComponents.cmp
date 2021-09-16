@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:button label="create multiple dynamic components" onclick="{!c.callme}"/>
+    <lightning:card title="multiple dynamic components">
+        {!v.body}
+    </lightning:card>
+    <p>
+    </p>
+    <lightning:button label="Destroy" variant="destructive" onclick="{!c.Destruct}"/>
+</aura:component>

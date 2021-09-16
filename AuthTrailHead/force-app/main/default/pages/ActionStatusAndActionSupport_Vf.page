@@ -1,0 +1,28 @@
+<apex:page controller="ActionStatusAndActionSupport">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="selecte one option"/>
+                      <apex:selectList value="{!selectedAccRecord}" size="1">
+                          <apex:selectOptions value="{!selectedList}"/>
+                          <apex:actionSupport event="onchange" action="{!retreiveContacts}" status="Loadrecord" reRender="pb"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Related Contacts" id="pb">
+            <apex:actionStatus id="Loadrecord">
+                <apex:facet name="start">
+                    <apex:image value="{!$Resource.Loading}" style="width: 200px;height: 200px;"/>
+                </apex:facet>
+                <apex:facet name="stop">
+                    <apex:pageBlockTable value="{!Contacts}" var="con">
+                        <apex:column value="{!con.lastname}"/>
+                        <apex:column value="{!con.email}"/>
+                    </apex:pageBlockTable>
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

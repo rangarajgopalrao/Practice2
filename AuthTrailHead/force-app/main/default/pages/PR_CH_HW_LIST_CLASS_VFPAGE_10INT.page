@@ -1,0 +1,7 @@
+<apex:page controller="PR_CH_LIST_intlistseries">
+    <apex:pageBlock >
+    	<apex:dataList value="{!numbers}" var="n">
+        	<apex:outputText value="{!n}"></apex:outputText>
+        </apex:dataList>
+    </apex:pageBlock>
+</apex:page>

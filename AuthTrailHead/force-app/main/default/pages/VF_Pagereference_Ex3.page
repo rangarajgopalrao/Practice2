@@ -1,0 +1,14 @@
+<apex:page controller="Pagereference_Ex3">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:selectList size="1" value="{!selected}">
+                    <apex:selectOption itemLabel="-None-" itemValue="None"/>
+                    <apex:selectOption itemLabel="Account" itemValue="Account"/>
+                    <apex:selectOption itemLabel="Contact" itemValue="Contact"/>
+                </apex:selectList>
+                <apex:commandButton value="Go" action="{!SearchButton}"/>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

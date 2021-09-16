@@ -1,0 +1,30 @@
+<aura:component controller="LT_9_EG4_DISPLAY_List_CONTACT">
+    
+    <aura:attribute name="contacts" type="contact[]"/>
+    <aura:attribute name="searchtext" type="string"/>
+    
+    <lightning:card>
+        <aura:set attribute="title">
+        <lightning:layout>
+            <lightning:layoutitem size="3" padding="around-small">
+                FirstName  : <lightning:input value="{!searchtext}"/>
+            </lightning:layoutitem>
+            
+            <lightning:layoutitem size="2" padding="around-small">
+                <br/>
+                <lightning:button label="Submit" onclick="{!c.showlist}"/>
+            </lightning:layoutitem>
+        </lightning:layout>
+            
+        <lightning:layout multipleRows="true">
+            <aura:iteration items="{!v.contacts}" var="con">
+                <lightning:layoutitem size="3" padding="around-small">
+                    Last Name  : {!con.lastname}  <br/>
+                    First Name : {!con.firstname}  <br/>
+                    Phone      : {!con.phone}  <br/>
+                </lightning:layoutitem>
+            </aura:iteration>
+        </lightning:layout>
+       </aura:set>
+    </lightning:card>
+</aura:component>

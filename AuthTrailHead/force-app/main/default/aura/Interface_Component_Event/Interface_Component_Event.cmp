@@ -1,0 +1,6 @@
+<aura:component implements="c:Interface_Using_Event">
+	<lightning:card title="component Event Fire and Handle in Same Component">
+        <lightning:button label="submit" onclick="{!c.callme}"/>
+    </lightning:card>
+    <aura:handler name="first" event="c:Event_Created_For_Interface" action="{!c.show}"/>
+</aura:component>

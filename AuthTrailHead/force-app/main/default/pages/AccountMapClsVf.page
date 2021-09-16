@@ -1,0 +1,12 @@
+<apex:page controller="AccountMapCls">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accMap}" var="acc">
+        	<apex:column value="{!accMap[acc].Name}"/>
+            <apex:column value="{!accMap[acc].Phone}"/>
+            <apex:column value="{!accMap[acc].Rating}"/>
+            <apex:column value="{!accMap[acc].Industry}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

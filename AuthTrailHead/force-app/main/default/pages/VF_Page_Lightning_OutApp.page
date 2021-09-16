@@ -1,0 +1,33 @@
+<apex:page >
+    <apex:includeLightning />
+    <apex:form >
+        <apex:pageBlock title="Vf Component">
+            <apex:pageBlockSection title="Emp Details">
+                <apex:inputText label="Enter Name"/>
+                <apex:inputText label="Enter Age"/>
+                <p></p>
+                <apex:commandButton value="Save"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <div id="first">
+        
+    </div>
+    <script>
+         $Lightning.use("c:LC_InVF_Button",function(){
+                            $Lightning.createComponent(
+                                "lightning:button",
+                                {
+                                    "label":"submit",
+                                     "aura:id":"btn1",
+                                      "variant":"success",
+                                    "iconName":"standard:account"
+                                },
+                                "first",
+                                function(cmp){
+                                    alert('lightning button called successfully');
+                                }
+                            );
+         });
+    </script>
+</apex:page>

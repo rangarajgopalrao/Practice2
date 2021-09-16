@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable" access="global" controller="OverLayLib_Account_View_Controller" >
+    <aura:attribute name="accounts" type="Object"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:attribute name="columns" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    <div style="height :300px">
+        <lightning:datatable aura:id="dtTable"
+                             columns="{!v.columns}"
+                             data="{!v.accounts}"
+                             keyField="Id"
+                             onrowaction="{!c.handleRowAction}" />
+    </div>
+</aura:component>

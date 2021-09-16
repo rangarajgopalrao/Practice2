@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="firstone" type="c:Application_Event_Ex1"/>
+    
+    <lightning:button label="Submit" onclick="{!c.invoke}"/>  <br></br>
+</aura:component>

@@ -1,0 +1,21 @@
+<aura:component controller="DataTableAccApex">
+    <aura:attribute name="mydata" type="Account[]"/>
+    <aura:attribute name="mycolumn" type="List"/>
+    <aura:attribute name="AccCheck" type="boolean"/>
+    <aura:attribute name="SelectedAcc" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <lightning:datatable data="{!v.mydata}"
+                         columns="{!v.mycolumn}"
+                         keyField="id"
+                         hideCheckboxColumn="true"
+                         onrowselections="{!c.fetchSelectedRecord}"/>
+    <aura:if isTrue="{!v.AccCheck}">
+        <b>Selected Account</b>
+        <aura:iteration items="{!SelectedAcc}" var="acc">
+            <lightning:card title="selected record">
+                {!acc.name}<p></p>
+                {!acc.rating}
+            </lightning:card>
+        </aura:iteration>
+    </aura:if>
+</aura:component>

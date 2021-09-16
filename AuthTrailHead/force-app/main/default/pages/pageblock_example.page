@@ -1,0 +1,28 @@
+<apex:page >
+    <apex:form >
+    <apex:sectionHeader title="JNTUH" description="MECHANICAL ENGINEERING"/>
+    <apex:pageBlock >
+    	<apex:commandButton title="THERMAL" value="TD"/>
+   </apex:pageBlock>
+        
+        <apex:sectionHeader title="JNTUH" description="ELECTRONICS ENGINEERING"/>
+    <apex:pageBlock >
+    	<apex:commandButton value="VLSI" disabled="true"/>
+   </apex:pageBlock>
+        
+        <apex:sectionHeader title="JNTUH" description="ELECTRICAL ENGINEERING"/>
+    <apex:pageBlock >
+    	<apex:commandButton value="POWER" action="https://jntuhceh.ac.in/viewdept/2"/>
+   </apex:pageBlock>
+        
+        <apex:sectionHeader title="JNTUH" description="COMPUTER SCIENCE ENGINEERING"/>
+    <apex:pageBlock >
+    	<apex:commandButton value="cloud computing" style="background:yellow;color:red"/>
+   </apex:pageBlock>
+        
+        <apex:sectionHeader title="JNTUH" description="CIVIL ENGINEERING"/>
+    <apex:pageBlock >
+    	<apex:commandButton value="structure" action="apexpages"/>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

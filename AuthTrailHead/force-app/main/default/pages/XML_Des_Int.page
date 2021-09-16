@@ -1,0 +1,13 @@
+<apex:page controller="XML_Des_Int">
+    <apex:form >
+        <apex:pageBlock title="Simple Desearialization">
+            <apex:panelGrid columns="3" width="600">
+                <apex:inputTextarea value="{!xmlstring}" rows="6" cols="100"/>
+                <apex:panelGrid columns="1">
+                    <apex:commandButton action="{!convertMe}" value="convert"/>
+                </apex:panelGrid>
+                <apex:inputTextarea value="{!parsedata}" rows="6" cols="100"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

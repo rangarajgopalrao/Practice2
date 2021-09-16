@@ -1,0 +1,30 @@
+<apex:page controller="Rupom_CONSTRUCTION_EG3">
+    <apex:form >
+        <apex:pageBlock title="Create Account">
+            <apex:pageBlockSection >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Name"/>
+                    <apex:inputText value="{!AC.Name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Phone"/>
+                    <apex:inputText value="{!AC.Phone}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Industry"/>
+                    <apex:inputText value="{!AC.Industry}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Rating"/>
+                    <apex:inputText value="{!AC.Rating}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:commandButton value="Saveeeeeeeeeeeeeee" action="{!CreateAcc}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

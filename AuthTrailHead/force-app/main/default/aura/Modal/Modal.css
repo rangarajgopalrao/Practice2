@@ -1,0 +1,9 @@
+.THIS.mymodal .slds-modal__header{
+    background:blue;
+}
+.THIS.mymodal .slds-modal__content{
+    background:grey;
+}
+.THIS.mymodal .slds-modal__footer{
+    background:yellow;
+}

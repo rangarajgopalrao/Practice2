@@ -1,0 +1,40 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:form id="dp">
+       <apex:pageBlock title="CALCULATOR">
+           <apex:pageBlockSection title="AREAS">
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="LENGTH :"/>
+                   <apex:inputText />
+              </apex:pageBlockSectionItem>
+               
+               <apex:selectRadio label="select area" title="please select one area">
+                   <apex:selectOption itemLabel="Rectangle" itemValue="re"/>
+                   <apex:selectOption itemLabel="Triangle" itemValue="ta"/>
+                   <apex:selectOption itemLabel="Trapezium" itemValue="tp"/>
+              </apex:selectRadio>
+               
+          			
+               
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="WIDTH :"/>
+                   <apex:inputText />
+              </apex:pageBlockSectionItem>
+               		<p> </p>
+               
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="HEIGHT :"/>
+                   <apex:inputText />
+              </apex:pageBlockSectionItem>
+               
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Result :"/>
+                   <apex:outputText />
+              </apex:pageBlockSectionItem>
+               		
+               <apex:commandButton value="Calculate" action="save" reRender="dp" />
+               
+               
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

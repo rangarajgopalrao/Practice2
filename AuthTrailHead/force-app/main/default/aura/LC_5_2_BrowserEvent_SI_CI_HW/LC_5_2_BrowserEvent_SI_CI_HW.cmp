@@ -1,0 +1,17 @@
+<aura:component >
+	<lightning:card title="SI-CI" iconName="utility:favorite">
+        <lightning:input label="Enter Priciple" aura:id="v1"/>
+        <lightning:input label="Enter Rate of interest" aura:id="v2"/>
+        <lightning:input label="Enter number of years" aura:id="v3"/>
+        <lightning:input label="Result" aura:id="v4"/>
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="SI" aura:id="SI" onclick="{!c.callme}"/>
+                <lightning:button label="CI" aura:id="CI" onclick="{!c.callme}"/>
+           </lightning:buttongroup>
+        </aura:set>
+        <aura:set attribute="footer">
+                <lightning:button label="Reset" aura:id="Reset" onclick="{!c.callme}"/>
+            </aura:set>
+    </lightning:card>
+</aura:component>

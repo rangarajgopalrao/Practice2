@@ -1,0 +1,7 @@
+<apex:page controller="CL_INT_1707_HW_XMLDserFile">
+    <apex:form >
+        <apex:inputFile value="{!xmlfile}" fileName="utr"/>
+        <apex:commandButton value="convert" action="{!XMLDserFile}"/>
+        <apex:inputTextarea cols="50" rows="10" value="{!parsedata}"/>
+   </apex:form>
+</apex:page>

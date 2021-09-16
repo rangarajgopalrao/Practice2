@@ -1,0 +1,24 @@
+<apex:page standardController="Account" showHeader="false">
+    <apex:dataTable value="{!account.contacts}" var="ac" border="5">
+        <apex:column >
+            <apex:facet name="footer">Total</apex:facet> 
+       </apex:column>
+        <apex:column >
+            <apex:facet name="header">Customer First Name</apex:facet>
+           {!ac.firstname} 
+       </apex:column>
+        <apex:column >
+            <apex:facet name="header">Customer Last Name</apex:facet>
+           {!ac.Lastname} 
+       </apex:column>
+        <apex:column >
+            <apex:facet name="header">Customer Email</apex:facet>
+           {!ac.Email} 
+       </apex:column>
+        <apex:column >
+            <apex:facet name="header">Page number</apex:facet> 
+       </apex:column>
+        
+   </apex:dataTable>
+    
+</apex:page>

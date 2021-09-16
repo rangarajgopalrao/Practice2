@@ -1,0 +1,16 @@
+<apex:page controller="AccountOptionList">
+    <apex:form id="f1">
+        <apex:pageBlock title="acc list">
+            Account Rating:&nbsp;<apex:selectList value="{!selected}" size="1">
+                <apex:selectOptions value="{!option}"/>
+            <apex:actionSupport action="{!RatingBasedAcc}" reRender="f1" event="onchange"/>
+           </apex:selectList>
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column headerValue="Name" value="{!a.name}"/>
+                <apex:column headerValue="Industry" value="{!a.industry}"/>
+                <apex:column headerValue="Type" value="{!a.type}"/>
+                <apex:column headerValue="Phone" value="{!a.phone}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

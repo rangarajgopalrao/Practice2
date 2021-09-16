@@ -1,0 +1,4 @@
+<aura:component >
+    <c:Ex1_ActionOverrides_Comp1 aura:id="firstComp"/>
+    <lightning:button label="submit" onclick="{!c.show}"/>
+</aura:component>

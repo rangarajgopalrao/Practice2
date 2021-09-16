@@ -1,0 +1,35 @@
+<apex:page controller="DML_EX3_ACC_OPP">
+    <apex:form >
+        <apex:pageBlock title="ACC-OPP LookUp Relation">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!save}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account">
+                <apex:inputText value="{!acc.name}"/>
+                <apex:inputText value="{!acc.phone}"/>
+                <apex:inputField value="{!acc.industry}"/>
+                <apex:inputField value="{!acc.rating}"/>
+           </apex:pageBlockSection>
+            
+            <br/><br/>
+            
+            <apex:pageBlockTable title="Opportunity" value="{!opp}" var="o" id="one">
+                <apex:column headerValue="name">
+                  <apex:inputText value="{!o.name}"/>
+               </apex:column>
+                <apex:column headerValue="Stagename">
+                  <apex:inputField value="{!o.stagename}"/>
+               </apex:column>
+                <apex:column headerValue="Closedate">
+                  <apex:inputField value="{!o.closedate}"/>
+               </apex:column>
+                <apex:column headerValue="Amount">
+                  <apex:inputField value="{!o.amount}"/>
+               </apex:column>
+                <apex:column >
+                  <apex:commandButton value="add" action="{!add}" reRender="one"/>
+               </apex:column>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

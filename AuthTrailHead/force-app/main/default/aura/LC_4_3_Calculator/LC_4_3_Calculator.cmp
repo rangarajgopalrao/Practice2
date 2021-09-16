@@ -1,0 +1,14 @@
+<aura:component >
+	<aura:attribute name="aval" type="integer"/>
+    <aura:attribute name="bval" type="integer"/>
+    <aura:attribute name="results" type="integer"/>
+    
+    <lightning:card title="Calc" iconName="standard:solution">
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="NEW" onclick="{!c.new}"/>
+                <lightning:button label="OLD" onclick="{!c.old}"/>
+           </lightning:buttongroup>
+        </aura:set>
+   </lightning:card>
+</aura:component>

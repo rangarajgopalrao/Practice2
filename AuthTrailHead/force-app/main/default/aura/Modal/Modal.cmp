@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome">
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <lightning:button name="modal"  label="open modal" onclick="{!c.handlePopup}" variant="brand"/>
+</aura:component>

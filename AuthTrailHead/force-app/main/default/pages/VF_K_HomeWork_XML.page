@@ -1,0 +1,6 @@
+<apex:page controller="K_HomeWork_XML">
+    <apex:form >
+        <apex:inputFile value="{!xmlstring}" fileName="myfile" ></apex:inputFile>
+        <apex:commandButton value="Click here to import" action="{!homework}"/>
+    </apex:form>
+</apex:page>

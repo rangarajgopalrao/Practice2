@@ -1,0 +1,41 @@
+<apex:page id="P1">
+    <script>
+        function calcarea()
+    {
+        var L = document.getElementById("{$Component.P1.F1.PB1.PBS1.PBSI1.I1}").value;
+        var B = document.getElementById("{$Component.P1.F1.PB1.PBS1.PBSI2.I2}").value;
+        if(L==0)
+        {
+            alert('length and bredth is zero.no area value please enter valid integers');
+        }
+        else if(B==0)
+        {
+            alert('length and bredth is zero.no area value please enter valid integers');
+        }
+        else
+        {
+            var R = L*B;
+            document.getElementById("{$Component.P1.F1.PB1.PBS1.PBSI3.I3}").value = R;
+        }
+    }
+    </script>
+    <apex:form id="F1">
+        <apex:pageBlock title="Area calculation" id="PB1">
+            <apex:pageBlockSection id="PBS1">
+                <apex:pageBlockSectionItem id="PBSI1">
+                    <apex:outputLabel value="Enter Length" id="L1"/>
+                    <apex:inputText id="I1"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="PBSI2">
+                    <apex:outputLabel value="Enter Bredth" id="B1"/>
+                    <apex:inputText id="I2"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="PBSI3">
+                    <apex:outputLabel value="Result" id="R1"/>
+                    <apex:inputText id="I3"/>
+               </apex:pageBlockSectionItem>
+                <apex:commandButton value="Calculate Area" onclick="calcarea()" id="BT1"/>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

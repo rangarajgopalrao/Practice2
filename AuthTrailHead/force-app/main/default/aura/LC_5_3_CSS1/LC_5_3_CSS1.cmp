@@ -1,0 +1,22 @@
+<aura:component >
+    <div class="image">
+        <img src="{!$Resource.sundirect}"/>
+    </div>
+	<div class="box">
+        First Name : Gopal  <br/>
+        Last Name  : Rao    <br/>
+        City       : Hyderabad <br/>
+    </div>
+    <div class="slds-carousel">
+        First Name : Laxmi  <br/>
+        Last Name  : Prassana    <br/>
+        City       : Hyderabad <br/>
+    </div>
+    <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-id-1">
+    <abbr class="slds-required" title="required">* </abbr>Input Label</label>
+  <div class="slds-form-element__control">
+    <input type="text" id="text-input-id-1" placeholder="Placeholder Text" required="" class="slds-input" />
+  </div>
+</div>
+</aura:component>

@@ -1,0 +1,6 @@
+<apex:page >
+<apex:pageBlock title="ABCD">
+<APEX:pageBlockSection title="EFGH">
+</APEX:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,27 @@
+<apex:page controller="SOQL_EX7_SATHISH">
+    <apex:form >
+        <apex:pageBlock title="Dynamic Example">
+              <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="name"/>
+                    <apex:inputText value="{!name}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Industry"/>
+                    <apex:inputText value="{!industry}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+            <apex:pageBlockButtons location="top">
+            <apex:commandButton value="rayu" action="{!search}"/>
+          </apex:pageBlockButtons>
+       </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!acc}" var="a" rendered="{!!isnull(acc)}">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.industry}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

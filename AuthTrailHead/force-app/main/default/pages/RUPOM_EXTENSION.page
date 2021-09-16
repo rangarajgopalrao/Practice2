@@ -1,0 +1,39 @@
+<apex:page standardController="Account" extensions="Rupom_Extension" showHeader="false">
+    <apex:form id="f1">
+        <apex:messages />
+        <apex:pageblock title="Account Info and Saving using Standard Controller">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Phone}"/>
+                <apex:inputField value="{!Account.Fax}"/>
+                <apex:inputField value="{!Account.Sic}"/>
+                <apex:inputField value="{!Account.Industry}"/>
+                <apex:inputField value="{!Account.Rating}"/>
+                
+                <apex:commandButton value="Saveeeeeeeee" action="{!Save}"/>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+ <!-- ------------------------------------------------------------------------------------------------------- -->       
+        <apex:pageblock title="Calculating Area and Deleting Account using Extension">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Length"/>
+                    <apex:inputText value="{!L}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Bredth"/>
+                    <apex:inputText value="{!B}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:commandButton value="Calculate" action="{!CalcArea}"/>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="The Result Is"/>
+                    <apex:inputText value="{!R}"/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Deleeteeeeeeeeee" action="{!DeleteAcc}"/>
+                <apex:commandButton value="Create Account" action="{!CreateAcc}" reRender="f1"/>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

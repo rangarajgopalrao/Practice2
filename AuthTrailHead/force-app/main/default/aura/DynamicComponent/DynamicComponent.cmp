@@ -1,0 +1,8 @@
+<aura:component >
+    <lightning:button label="create component" onclick="{!c.onclick}"/>
+    <p></p>
+    <p></p>
+    <lightning:card title="dynamic component default body">
+        {!v.body}
+    </lightning:card>
+</aura:component>

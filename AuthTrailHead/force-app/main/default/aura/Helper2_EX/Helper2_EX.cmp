@@ -1,0 +1,18 @@
+<aura:component >
+    <lightning:button label="GoodMorning" onclick="{!c.GM}"/>
+    <lightning:button label="GoodNight" onclick="{!c.GN}"/>
+    <aura:attribute name="gi" type="string" default="Gopal"/>
+    <aura:attribute name="msg1" type="string"/>
+    <aura:attribute name="msg2" type="string"/>
+    <aura:attribute name="msg3" type="string"/>
+    <br></br>
+    Message from well wisher:
+    <br></br>
+    {!v.name}
+    <br></br>
+    {!v.msg1}
+    <br></br>
+    {!v.msg2}
+    <br></br>
+    {!v.msg3}
+</aura:component>

@@ -1,0 +1,11 @@
+<apex:page controller="Wrapper_Class_Ex2">
+    <apex:form >
+        <apex:pageBlock title="sales wrapper">
+            <apex:pageBlockTable value="{!empWrap}" var="ew">
+                <apex:column footerValue="sales name" headerValue="name" value="{!ew.name}"/>
+                <apex:column footerValue="sales exp" headerValue="expe" value="{!ew.exp}"/>
+                <apex:column footerValue="sales salary" headerValue="salary" value="{!ew.salary}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

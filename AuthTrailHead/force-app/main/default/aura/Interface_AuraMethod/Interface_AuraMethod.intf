@@ -1,0 +1,6 @@
+<aura:interface description="Interface Aura Method template">
+    <aura:method name="CallMe" action="{!c.Invoke}">
+        <aura:attribute name="EmpName" type="String"/>
+        <aura:attribute name="EmpSalary" type="Decimal"/>
+    </aura:method>
+</aura:interface>

@@ -1,0 +1,10 @@
+<apex:page >
+  <apex:form >
+   <apex:pageblock >
+   Deployment Examples
+    <apex:pageblockSection >
+    this only for example purpose
+   </apex:pageblockSection>
+  </apex:pageblock>
+ </apex:form>
+</apex:page>

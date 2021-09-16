@@ -1,0 +1,14 @@
+<aura:component >
+	<lightning:card title="simple interest calculator" iconName="utility:topic">
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="submit" onclick="{!c.submit}"/>
+                <lightning:button label="Reset" onclick="{!c.reset}"/>
+           </lightning:buttongroup>
+       </aura:set>
+            <lightning:input label="Enter principal amount" required="true" aura:id="ef1"/>
+            <lightning:input label="Enter number of years" required="true" aura:id="ef2"/>
+            <lightning:input label="Enter rate of interest" required="true" aura:id="ef3"/>
+            <lightning:input label="result: interes amount" aura:id="ef4"/>
+   </lightning:card>
+</aura:component>

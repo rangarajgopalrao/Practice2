@@ -1,0 +1,22 @@
+<apex:page standardController="Account" extensions="Account_New_Controller">
+    <apex:sectionHeader title="Account" subtitle="New Account" help="/apex/topic_covered"/>
+    <apex:form >
+        <apex:messages />
+        <apex:pageBlock title="account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!save}"/>
+                <apex:commandButton value="cancel" action="{!cancel}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!account.name}"/>
+                <apex:inputField value="{!account.industry}"/>
+                <apex:inputField value="{!account.phone}"/>
+                <apex:inputField value="{!account.rating}"/>
+                <apex:inputField value="{!account.type}"/>
+                <apex:inputField value="{!account.annualrevenue}"/>
+                <apex:inputField value="{!account.ownership}"/>
+                <apex:inputField value="{!account.Active__c}"/>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,67 @@
+<apex:page controller="Rupom_HM_CAL_COMPLETE">
+    <apex:form id="fm1">
+        <apex:pageBlock title="Calculator">
+            <apex:pageBlockSection title="Areas">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Length :" />
+                    <apex:inputText value="{!Len}"/>  
+                </apex:pageBlockSectionItem>
+                 <apex:selectRadio label="Please select Area" title="Please select one area" value="{!CHS}">
+                    <apex:selectOption itemLabel="Rectangle" itemValue="R" />
+                    <apex:selectOption itemLabel="Triangle" itemValue="TR" />
+                    <apex:selectOption itemLabel="Trapezium" itemValue="TP" />
+                </apex:selectRadio>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Bredth/Base :" />
+                    <apex:inputText value="{!Br}"/>
+                </apex:pageBlockSectionItem>
+                <p></p>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Height :" />
+                    <apex:inputText value="{!He}"/>
+                </apex:pageBlockSectionItem>           
+               
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result" /> 
+                    <apex:inputText value="{!Results}"/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Calculate" action="{!Mainshape}" reRender="fm1"/>    
+            </apex:pageBlockSection>
+            
+            
+            
+            <apex:pageBlockSection title="Sum of Even or Odd Numbers">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Number :" />
+                    <apex:inputText value="{!N}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result" /> 
+                    <apex:inputText value="{!Result}"/>
+                </apex:pageBlockSectionItem>
+                <apex:selectCheckboxes label="Select One Option" layout="pagedirection" value="{!CH}">
+                    <apex:selectOption itemLabel="Even" itemValue="EV" />
+                    <apex:selectOption itemLabel="Odd" itemValue="OD" />
+                    <apex:selectOption itemLabel="None" itemValue="NN" />
+                </apex:selectCheckboxes>
+                <apex:commandButton value="Calculate" action="{!Mainmhtd}"/>  
+                
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Factorial">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Number :" />
+                    <apex:inputText value="{!N}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="resul" /> 
+                    <apex:inputText value="{!resul}"/>
+                </apex:pageBlockSectionItem>
+                <p> </p>
+                <apex:commandButton value="Calculate" action="{!mainmethod}"/>  
+            </apex:pageBlockSection> 
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

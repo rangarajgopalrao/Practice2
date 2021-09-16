@@ -1,0 +1,12 @@
+<aura:component implements="c:Interface_AuraMethod">
+	<lightning:card title="Interface for Aura Method">
+        <br/><br/>
+        <aura:set attribute="actions"><br/><br/>
+            <p></p>
+            <lightning:button label="submit" onclick="{!c.Show}"/>
+        </aura:set>
+         <p></p><p></p>
+            Employee Name : {!v.EmpName} <br/>
+            Employee Salary :  {!v.EmpSalary} <br/>
+    </lightning:card>
+</aura:component>

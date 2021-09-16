@@ -1,0 +1,30 @@
+<apex:page controller="PRACT_CONSTRUCT_04">
+    <apex:form >
+        <apex:pageBlock title="Create Account">
+            <apex:pageBlockSection >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Name"/>
+                    <apex:inputText value="{!A.Name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Phone"/>
+                    <apex:inputText value="{!A.Phone}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Industry"/>
+                    <apex:inputText value="{!A.Industry}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Rating"/>
+                    <apex:inputText value="{!A.Rating}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:commandButton value="Saveeeeeeeeeeeeeee" action="{!CreatAcc}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

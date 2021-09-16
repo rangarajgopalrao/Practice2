@@ -1,0 +1,6 @@
+.THIS.one 
+{
+    background-color: token(SJBGColor);
+    border-width: token(SJ2Border);
+    border-style : token(SjBorderStyle);
+}

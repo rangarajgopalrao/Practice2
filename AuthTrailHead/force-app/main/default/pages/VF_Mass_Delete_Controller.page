@@ -1,0 +1,15 @@
+<apex:page standardController="Account" extensions="Mass_Delete_Controller" recordSetVar="Items">
+    <apex:form >
+        <apex:pageblock title="Account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Mass Delete" action="{!massdelete}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockTable var="a" value="{!acc}">
+                <apex:column value="{!a.name}"/>
+                 <apex:column value="{!a.phone}"/>
+                 <apex:column value="{!a.industry}"/>
+                 <apex:column value="{!a.rating}"/>
+            </apex:pageBlockTable>
+        </apex:pageblock>
+   </apex:form>
+</apex:page>

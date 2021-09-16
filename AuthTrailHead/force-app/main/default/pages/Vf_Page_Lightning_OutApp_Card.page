@@ -1,0 +1,36 @@
+<apex:page >
+    <apex:includeLightning />
+    <apex:form >
+        <apex:pageBlock title="VF Component">
+            <apex:pageBlockSection title="Emp details in Vf page">
+                <apex:inputText label="Enter Name"/>
+                <apex:inputText label="Enter Age"/>
+                <p>
+                    
+                </p>
+                <apex:commandButton value="submitttt"/>
+              </apex:pageBlockSection>
+            
+           <apex:pageBlockSection title="Emp details in Lightning page">
+            <div id="two">   
+            </div>
+           </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+    
+    <script>
+            $Lightning.use("c:LC_InVF_Card",function(){
+                $Lightning.createComponent("lightning:card",
+                                          {
+                                              "title":"EmpDetails",
+                                              "iconName":"standard:account"
+                                          },
+                                          "two",
+                                          function(cmp)
+                                          {
+                                              alert('lightning card called');
+                                          });
+            }
+            );
+    </script>
+</apex:page>

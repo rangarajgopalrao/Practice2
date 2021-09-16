@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:handler event="c:Application_Event_Ex1" action="{!c.showme}"/>
+    
+    <aura:attribute name="stdname" type="string"/>
+    <aura:attribute name="stdcity" type="string"/>
+    
+    ==============Child2 Component Handle=====================
+    <br/><br/>
+    Student Name : {!v.stdname}  <br/><br/>
+    Student City : {!v.stdcity}  <br/><br/>
+    
+    <c:Application_Event_Ex1_Child_1/>
+</aura:component>

@@ -1,0 +1,13 @@
+<apex:page controller="CL_INT_EG1_XML_User">
+    <apex:form >
+        <apex:pageBlock title="Simple Desearialization XML">
+            <apex:panelGrid columns="100" width="100">
+                <apex:inputTextarea cols="50" rows="10" value="{!xmlstring}"/>
+                <apex:panelGrid >
+                    <apex:commandButton value="convert" action="{!convertme}" reRender=""/>
+                </apex:panelGrid>
+                <apex:inputTextarea cols="50" rows="10" value="{!parsedata}"/>
+           </apex:panelGrid>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

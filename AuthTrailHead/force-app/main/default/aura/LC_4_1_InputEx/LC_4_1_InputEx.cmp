@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:input label="firstname" type="string"/>
+    <lightning:input label="lastname" type="text"/>
+    <lightning:input label="phone" type="string"/>
+    <lightning:input label="email" type="text"/>
+    <lightning:input label="date of birth" type="date"/>
+    <lightning:input label="favourite color" type="color"/>
+    <lightning:input label="password" type="text" required="true"/>
+</aura:component>

@@ -1,0 +1,13 @@
+<apex:page controller="AdditionExample">
+    <apex:form id="pb">
+        <apex:pageBlock title="Addition">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Add" action="{!addNumbers}" reRender="pb"/>
+            </apex:pageBlockButtons>
+            Enter aVal:<apex:inputText size="5" value="{!aVal}"/><br/><br/><br/>
+            Enter bVal:<apex:inputText size="5" value="{!bVal}"/><br/><br/><br/>
+            Result:<apex:inputText value="{!result}" size="5"/>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

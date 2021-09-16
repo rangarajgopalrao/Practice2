@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:handler name="RegEvnt" event="c:LCEvent" action="{!c.HanleChildComp}"/>
+    
+    <aura:attribute name="CaptureValuesFromEvent" type="string"/>
+      values capture from event and display in parent component : <p>
+    </p> 
+    {!v.CaptureValuesFromEvent}
+    
+    <c:ChildComponentLC/>
+</aura:component>

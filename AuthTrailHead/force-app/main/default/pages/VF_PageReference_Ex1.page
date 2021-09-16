@@ -1,0 +1,29 @@
+<apex:page controller="PageReference_Ex1">
+    <apex:form id="fm">
+        <apex:pageMessages />
+    <apex:pageBlock title="Student Reg">
+        <apex:pageBlockButtons location="top">
+        <apex:commandButton value="Save" action="{!save}"/>
+        <apex:commandButton value="cancel" action="{!cancel}" reRender="fm"/>
+       </apex:pageBlockButtons>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Name"/>
+                <apex:inputText />
+           </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Name"/>
+                <apex:selectList size="1" value="{!qualification}">
+                    <apex:selectOption itemLabel="None" itemValue="None"/>
+                     <apex:selectOption itemLabel="M.Tech" itemValue="M.Tech"/>
+                     <apex:selectOption itemLabel="B.Tech" itemValue="B.Tech"/>
+               </apex:selectList>
+           </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Phone"/>
+                <apex:inputText />
+           </apex:pageBlockSectionItem>
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

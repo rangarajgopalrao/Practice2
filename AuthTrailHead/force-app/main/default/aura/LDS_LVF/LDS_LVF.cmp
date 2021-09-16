@@ -1,0 +1,19 @@
+<aura:component >
+	<lightning:recordViewForm
+                              recordId="0012w00000bsy3cAAA"
+                              objectApiName="Account">
+        <lightning:card title="Record View Form-Component">
+            <lightning:messages/>
+            <lightning:layout>
+                <lightning:layoutItem size="4">
+                    <lightning:outputfield fieldName="Name"/>
+                    <lightning:outputfield fieldName="Industry"/>
+                    <lightning:outputfield fieldName="Rating"/>
+                    <lightning:outputfield fieldName="Phone"/>
+                    <lightning:outputfield fieldName="Fax"/>
+                    <lightning:outputfield fieldName="Sic"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card>
+    </lightning:recordViewForm>
+</aura:component>

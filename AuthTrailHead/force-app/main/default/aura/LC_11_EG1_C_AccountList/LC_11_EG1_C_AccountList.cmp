@@ -1,0 +1,18 @@
+<aura:component controller="SSC_11_CreateAccAndList">
+    <aura:attribute name="newacc" type="Account" default="{sObjectType:'Account'}"/>
+    
+    
+    <aura:registerevent name="GopalEvt" type="c:LE_11_EG1_AccountList"/>
+    
+    <lightning:card title="Account" iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:button label="Save" onclick="{!c.addme}"/>
+            </lightning:buttonGroup>
+        </aura:set>
+        
+        <lightning:input label="Account Name" value="{!v.NewAcc.name}"/>
+        <lightning:input label="Account Phone" value="{!v.NewAcc.phone}"/>
+        <lightning:input label="Account Industry" value="{!v.NewAcc.industry}"/>
+    </lightning:card>
+</aura:component>

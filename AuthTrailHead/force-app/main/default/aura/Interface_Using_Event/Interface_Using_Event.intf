@@ -1,0 +1,3 @@
+<aura:interface description="Interface template">
+    <aura:registerEvent name="first" type="c:Event_Created_For_Interface"/>
+</aura:interface>

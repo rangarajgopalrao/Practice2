@@ -1,0 +1,16 @@
+public class WRAPPER_CLASS_EG2
+{
+	PUBLIC INTEGER A;				//PRIMITIVE DATA TYPE
+    PUBLIC STRING NAME1;				//PRIMITIVE DATA TYPE
+    PUBLIC LIST<ACCOUNT> C;			//LIST OR COLLECTION DATA TYPE
+    PUBLIC WRAPPER_CLASS_EG1 ABD;    //ABSTRACT DATA TYPE
+    
+    public void method()
+    {
+        A = 200;
+        NAME1= 'GOPAL';
+        ABD.NAME='NANDINI';
+        ABD.AGE = 28;
+        ABD.SALARY= 200000.01;
+    }
+}

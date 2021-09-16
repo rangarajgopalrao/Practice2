@@ -1,0 +1,18 @@
+<apex:page controller="PT_Account_Contact1">
+    <apex:form >
+        <apex:pageBlock title="Accounts">
+          <apex:pageBlockTable value="{!Accounts}" var="a">
+              <apex:column value="{!a.name}"/>
+               <apex:column value="{!a.phone}"/>
+               <apex:column value="{!a.industry}"/>
+               <apex:column value="{!a.rating}"/>
+              <apex:column headerValue="Contacts">
+              <apex:dataTable value="{!a.Contacts}" var="b" >
+                  <apex:column value="{!b.LastName}"/>
+                  <apex:column value="{!b.FirstName}"/>
+                  </apex:dataTable>
+              </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

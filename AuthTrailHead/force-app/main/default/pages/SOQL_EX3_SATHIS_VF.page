@@ -1,0 +1,26 @@
+<apex:page controller="SOQL_SATHISH_EX3">
+    <apex:form >
+        <apex:pageBlock title="accounts" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="search" action="{!search}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Name"/>
+                <apex:inputText value="{!accname}"/>
+           </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                <apex:outputLabel value="industry"/>
+                <apex:inputText value="{!accindustry}"/>
+           </apex:pageBlockSectionItem>
+         </apex:pageBlockSection>
+            <apex:pageBlock >
+            <apex:pageBlockTable value="{!acc}" var="a" width="300" border="frame">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.industry}"/>
+           </apex:pageBlockTable>
+          </apex:pageBlock>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

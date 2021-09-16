@@ -1,0 +1,6 @@
+<aura:tokens extends="c:Cust_LC_Token_1">
+	<aura:token name="SJ2FontColor" value="#F8F711"/>
+    <aura:token name="SJ2Border" value="5px"/>
+    <aura:token name="SJ2Margin" value="5px"/>
+    <aura:token name="SJ2Padding" value="20px"/>
+</aura:tokens>

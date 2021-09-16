@@ -1,0 +1,28 @@
+<apex:page controller="CH_WRAPPER_CLASS_CONTACT_EX1">
+    <apex:form id="pb">
+        <apex:pageBlock title="wrapper contact">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="submit" action="{!submit}" reRender="pb"/>
+           </apex:pageBlockButtons>
+            
+            <apex:pageBlockTable value="{!conWrapList}" var="cw">
+                <apex:column headerValue="select">
+                <apex:inputCheckbox value="{!cw.flag}"/>
+           </apex:column>
+            <apex:column headerValue="firstname" value="{!cw.c.firstname}"/>
+                <apex:column headerValue="lastname" value="{!cw.c.lastname}"/>
+                <apex:column headerValue="email" value="{!cw.c.email}"/>
+                <apex:column headerValue="phone" value="{!cw.c.phone}"/>
+           </apex:pageBlockTable>
+            </apex:pageBlock>
+        
+            <apex:pageBlock title="selectedcontact" id="pb">
+            <apex:pageBlockTable value="{!selectedcon}" var="s">
+                <apex:column headerValue="firstname" value="{!s.firstname}"/>
+                <apex:column headerValue="lastname" value="{!s.lastname}"/>
+                <apex:column headerValue="email" value="{!s.email}"/>
+                <apex:column headerValue="phone" value="{!s.phone}"/>
+           </apex:pageBlockTable> 
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

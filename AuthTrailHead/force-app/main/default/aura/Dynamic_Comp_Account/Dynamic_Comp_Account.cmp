@@ -1,0 +1,9 @@
+<aura:component controller="Dynamic_Account_List">
+    <aura:attribute name="accounts" type="Account[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/>
+    
+    <aura:Iteration items="{!v.accounts}" var="a">
+        <p>{!a.Name}-----{!a.Phone}</p>
+    </aura:Iteration>
+</aura:component>

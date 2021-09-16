@@ -1,0 +1,18 @@
+<apex:page controller="Utrace_Integration" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:inputText value="{!IpAddress}"/>
+        <apex:commandButton value="Submit" action="{!trace}"/>
+        <apex:pageBlock title="Header values" rendered="{! !ISNULL(HeaderMap)}">
+            <apex:pageBlockTable value="{!HeaderMap}" var="a">
+                <apex:column value="{!a}" headerValue="Response Header Key properties"/>
+                <apex:column value="{!HeaderMap[a]}" headerValue="Response Header values"/>
+            </apex:pageBlockTable>
+            <br/><br/>
+            <apex:inputTextarea rows="20" cols="50" value="{!BodyResult}"/> />
+            <apex:pageBlockTable value="{!BodyResMap}" var="b">
+                <apex:column headerValue="Response Body Key property" value="{!b}"/>
+                <apex:column headerValue="Response Body values" value="{!BodyResMap[b]}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

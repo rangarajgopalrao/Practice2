@@ -1,0 +1,27 @@
+<apex:page controller="OppWrapperClass">
+    <apex:form id="f1">
+        <apex:pageBlock id="opportunity" tabStyle="opportunity">
+            <b>stagename : </b>&nbsp;<apex:selectList size="1" value="{!selected}">
+            <apex:selectOptions value="{!option}">
+           </apex:selectOptions>
+          </apex:selectList>
+            
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton value="submit" action="{!stage}" reRender="f1"/>
+           </apex:pageBlockButtons>
+            
+              
+            
+                 <apex:dataTable value="{!owp}" var="o" cellpadding="2" width="200" border="frame">
+                   <apex:column headerValue="select">
+                       <apex:inputCheckbox value="{!o.flag}"/>
+                  </apex:column>
+                     <apex:column headerValue="name" value="{!o.opp.name}"/>
+                     <apex:column headerValue="stagename" value="{!o.opp.stagename}"/>
+                     <apex:column headerValue="closedate" value="{!o.opp.closedate}"/>
+                     <apex:column headerValue="amount" value="{!o.opp.amount}"/>
+                     <apex:column headerValue="account name" value="{!o.opp.account.name}"/>
+           </apex:dataTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,4 @@
+<aura:tokens>
+    <aura:token name="SJColor" value="#F82A11"/>
+    <aura:token name="SJBGColor" value="#111EF8"/>
+</aura:tokens>

@@ -1,0 +1,64 @@
+<apex:page sidebar="false" showHeader="false" >
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+            <apex:pageBlockSection title="Areas">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Length :" />
+                    <apex:inputText />  
+                </apex:pageBlockSectionItem>
+                 <apex:selectRadio label="Please select Area" title="Please select one area">
+                    <apex:selectOption itemLabel="Rectangle" itemValue="R" />
+                    <apex:selectOption itemLabel="Triangle" itemValue="TR" />
+                    <apex:selectOption itemLabel="Trapezium" itemValue="TP" />
+                </apex:selectRadio>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Bredth/Base :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <p></p>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Height :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>           
+               
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result" /> 
+                    <apex:outputText />
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Calculate"/>    
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Sum of Even or Odd Numbers">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Number :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result" /> 
+                    <apex:outputText />
+                </apex:pageBlockSectionItem>
+                <apex:selectCheckboxes label="Select One Option" layout="pagedirection" >
+                    <apex:selectOption itemLabel="Even" itemValue="E" />
+                    <apex:selectOption itemLabel="Odd" itemValue="O" />
+                </apex:selectCheckboxes>
+                <apex:commandButton value="Calculate"/>  
+                
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Factorial">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Number :" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result" /> 
+                    <apex:outputText />
+                </apex:pageBlockSectionItem>
+                <p> </p>
+                <apex:commandButton value="Calculate"/>  
+            </apex:pageBlockSection> 
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

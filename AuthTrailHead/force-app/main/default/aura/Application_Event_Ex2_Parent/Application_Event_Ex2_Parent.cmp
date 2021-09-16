@@ -1,0 +1,5 @@
+<aura:component controller="App_Event_Account_Search">
+    <c:Application_Event_Ex2_SearchText/>
+    <c:Application_Event_Ex2_Account_Child/>
+    <c:Application_Event_Ex2_Contact_Child/>
+</aura:component>

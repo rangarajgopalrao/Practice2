@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="recordId" type="id"/>
+    <aura:attribute name="accountFields" type="string[]" default="Name,Industry"/>
+    <aura:attribute name="accountRecord" type="object"/>
+    <aura:attribute name="error" type="string"/>
+    
+    
+    <force:recordData aura:id="gopal" recordId="{!v.recordId}" fields="{!v.accountFields}" targetFields="{!v.accountRecord}" 
+                      targetError="{!v.error}" mode="VIEW"/>
+    
+    <div>
+        Name     : <lightning:formattedText value="{!v.accountRecord.Name}"/>  <br/>
+        Industry : <lightning:formattedText value="{!v.accountRecord.Industry}"/>
+    </div>
+     
+    <!--
+    <force:recordData aura:id="gopal" recordId="{!v.recordId}" fields="{!v.accountFields}" targetFields="{!v.accountRecord}" 
+                      targetError="{!v.error}" mode="EDIT"/>
+    <div>
+        Name      : <lightning:input label="Name" value="{!v.accountRecord.Name}"/>  <br/>
+        Industry  : <lightning:input label="Industry" value="{!v.accountRecord.Industry}"/>
+    </div>
+	-->
+</aura:component>

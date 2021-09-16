@@ -1,0 +1,21 @@
+<aura:component controller="LT_9_EG3_SobjectParam">
+    <aura:attribute name="acc" type="account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.callme}"/>
+    
+    <lightning:card title="Account">
+        <lightning:layout>
+            <lightning:layoutItem size="3" padding="around-small">
+                Name : {!v.acc.Name}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3" padding="around-small">
+                Phone : {!v.acc.Phone}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3" padding="around-small">
+                Industry : {!v.acc.Industry}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3" padding="around-small">
+                Rating : {!v.acc.Rating}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

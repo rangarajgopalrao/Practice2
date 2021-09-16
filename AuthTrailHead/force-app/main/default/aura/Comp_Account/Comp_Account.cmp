@@ -1,0 +1,8 @@
+<aura:component >
+    
+	<div class="box">
+        <lightning:input label="Acc Name" aura:id="name"/>
+        <lightning:input label="Acc Phone" aura:id="phone"/>
+        <lightning:input label="Acc Industry" aura:id="industry"/>
+    </div>
+</aura:component>

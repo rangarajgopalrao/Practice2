@@ -1,0 +1,35 @@
+<apex:page controller="Account_Line_Item">
+    <apex:form >
+        <apex:pageBlock title="Account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!create}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name"/>
+                    <apex:inputText value="{!accwrap.company}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Industry"/>
+                    <apex:inputText value="{!accwrap.industry}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Lastname"/>
+                    <apex:inputText value="{!accwrap.Lastname}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="firstname"/>
+                    <apex:inputText value="{!accwrap.firstname}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Phone"/>
+                    <apex:inputText value="{!accwrap.phone}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email"/>
+                    <apex:inputText value="{!accwrap.email}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

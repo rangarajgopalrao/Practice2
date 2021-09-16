@@ -1,0 +1,8 @@
+<aura:component controller="Account_Contact_Ex2">
+    <aura:handler name="mycon" event="c:Acc_Con_Event" action="{!c.invoke}"/>
+    
+    <lightning:input label="LastName" aura:id="lname"/>
+    <lightning:input label="FirstName" aura:id="fname"/>
+    
+    <c:Acc_Con_Child_Comp/>
+</aura:component>

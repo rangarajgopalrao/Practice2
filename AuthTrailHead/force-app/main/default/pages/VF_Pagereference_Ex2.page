@@ -1,0 +1,13 @@
+<apex:page controller="Pagereference_Ex2">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top">
+              <apex:commandButton value="account" action="{!directToaccountPage}"/>
+              <apex:commandButton value="contact" action="{!directTocontactPage}"/>
+                <apex:commandButton value="accountNull" action="{!invoke}"/>
+                <apex:commandButton value="accountListPage" action="{!directToaccountListPage}"/>
+                <apex:commandButton value="opportunityListPage" action="{!directToopportunityPage}"/>
+         </apex:pageBlockButtons>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

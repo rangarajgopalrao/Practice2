@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="fields" type="String[]" default="['Name','Rating','Industry','Phone']"/>
+    <lightning:card title="Custom fields Components LDS">
+        <lightning:layout>
+            <lightning:layoutItem size="4">
+                <lightning:recordForm recordId="{!v.recordId}"
+                                      objectApiName="Account"
+                                      fields="{!v.fields}"
+                                      mode ="edit"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,18 @@
+<apex:page controller="OppSelectOptionList">
+    <apex:form id="f1">
+        <apex:pageBlock title="opportunity" tabStyle="opportunity">
+            Stagename:&nbsp; <apex:selectList size="2" value="{!selected}">
+                  // i can give size = 1 also //
+                <apex:selectOptions value="{!options}"/>
+                <apex:actionSupport event="onchange" action="{!stageselectaction}" reRender="f1"/>
+           </apex:selectList>
+            <apex:pageBlockTable value="{!opplist}" var="op">
+                <apex:column headerValue="name" value="{!op.name}"/>
+                <apex:column headerValue="stagename" value="{!op.stagename}"/>
+                <apex:column headerValue="amount" value="{!op.amount}"/>
+                <apex:column headerValue="closedate" value="{!op.closedate}"/>
+                <apex:column headerValue="account name" value="{!op.account.name}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

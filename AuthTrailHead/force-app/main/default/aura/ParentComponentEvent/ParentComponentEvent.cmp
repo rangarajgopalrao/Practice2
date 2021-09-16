@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:handler name="regInChild" event="c:ComponentEvent" action="{!c.HandledByParent}"/>
+    <aura:attribute name="parentMessage" type="String"/>
+    {!v.parentMessage}
+    <c:ChildComponentEvent/>
+</aura:component>

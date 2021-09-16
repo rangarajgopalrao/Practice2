@@ -1,0 +1,25 @@
+<apex:page controller="Rupom_CL_01">
+    <apex:form id="f1">
+        <apex:pageBlock id="pb1">
+            <apex:pageBlockSection id="pbs1">
+                <apex:pageBlockSectionItem id="pbsi1">
+                    <apex:outputLabel value="enter the length"/>
+                    <apex:inputText value="{!L}"/>
+               </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem id="pbsi2">
+                    <apex:outputLabel value="enter the bredth"/>
+                    <apex:inputText value="{!B}"/>
+               </apex:pageBlockSectionItem>
+                <apex:commandButton value="calculate" action="{!calculateA}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlockSection id="pb2">
+                <apex:pageBlockSectionItem id="pbs2">
+                    <apex:outputLabel value="the result is :"/>
+                    <apex:inputText value="{!A}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+    
+</apex:page>

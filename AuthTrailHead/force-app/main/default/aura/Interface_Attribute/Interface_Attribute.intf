@@ -1,0 +1,4 @@
+<aura:interface description="Interface template">
+	<aura:attribute name="EmpName" type="String"/>
+    <aura:attribute name="EmpAge" type="String" default="29"/>
+</aura:interface>

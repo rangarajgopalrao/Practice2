@@ -1,0 +1,21 @@
+<apex:page standardController="Account" extensions="Contact_Update_Controller" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="Account-Contact">
+            <apex:pageBlockButtons location="Top">
+                <apex:commandButton value="Send Email" action="{!invoke}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:outputText value="{!account.name}"/>
+                <apex:outputText value="{!account.phone}"/>
+                <apex:outputText value="{!account.industry}"/>
+                <apex:outputText value="{!account.rating}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!contacts}" var="c" rendered="{!contacts.size>0}">
+                <apex:column value="{!c.firstname}"/>
+                <apex:column value="{!c.lastname}"/>
+                <apex:column value="{!c.phone}"/>
+                <apex:column value="{!c.email}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

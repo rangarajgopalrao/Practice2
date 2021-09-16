@@ -1,0 +1,30 @@
+<apex:page standardController="ACCOUNT" extensions="Example_Extention" >
+    <apex:form >
+        <apex:messages />
+        <apex:pageBlock title="ACCOUNT RELATED TO STANDARD CONTROLLER" >
+            <apex:pageBlockSection columns="2" >
+                <apex:inputField value="{!ACCOUNT.NAME}"/>
+                <apex:inputField value="{!ACCOUNT.phone}" required="true"/> 
+                <apex:inputField value="{!ACCOUNT.INDUSTRY}"/>
+                <apex:inputField value="{!ACCOUNT.FAX}"/>
+                <apex:inputField value="{!ACCOUNT.RATING}"/>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+        <apex:pageBlock title="CONTROLLER BY EXTENSION CALLING CLASS">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="ENTER NAME"/>
+                    <apex:inputText value="{!NAME}" required="true"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="AGE"/>
+                    <apex:inputText value="{!AGE}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+            <apex:commandButton value="SUBMIT" action="{!SUBMIT}"/>
+       </apex:pageBlock>
+        <apex:pageBlock >
+            
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="myVal" type="String"/>
+    <lightning:select name="select 1" label="How many tickets ?" required="true" value="{v.myVal}">
+        <option value=" ">Choose One</option>
+        <option value="1">ONE</option>
+        <option value="2">TWO</option>
+        <option value="3">THREE</option>
+    </lightning:select>
+    
+</aura:component>

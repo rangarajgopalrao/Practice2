@@ -1,0 +1,9 @@
+<apex:page controller="CL_2807_INTG_RT_POSTALCODE">
+    <apex:form >
+        Enter Pincode : <apex:inputtext value="{!postalcode}"/> <br/>
+        <apex:commandButton value="Convert" action="{!GetPostalDetails}"/> <br/>
+        <apex:dataTable value="{!places}" var="a">
+            {!a}
+        </apex:dataTable>
+   </apex:form>
+</apex:page>

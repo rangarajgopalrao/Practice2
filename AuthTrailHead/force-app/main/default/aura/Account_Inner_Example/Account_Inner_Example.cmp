@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<!---   <div>
+        Child 1 <br></br>
+        Child 2 <br></br>
+        Child 3 <br></br>
+        Child 4 <br></br>
+    </div> 
+    
+    
+    <aura:attribute name="sample" type="object"/>
+    <force:recordData aura:id="recordId" layoutType="FULL" targetFields="{!v.sample}"/>
+    {!v.recordId}<br/>
+    
+    Name      : {!v.sample.name} <br/>
+    Stage     : {!v.sample.stagename} <br/>
+    CloseDate : {!v.sample.closedate} -->
+    
+    <aura:attribute name="recordId" type="ID"/>
+    <aura:attribute name="myfields" type="string[]" default="name,stagename,closedate"/>
+    <aura:attribute name="simplerecord" type="object"/>
+    <aura:attribute name="error" type="string"/>
+    
+    <force:recordData aura:id="gopal" recordId="{!v.recordId}" fields="{!v.myfields}" targetFields="{!v.simplerecord}"
+                      targetError="{!v.error}" mode="EDIT"/>
+    <div>
+        <lightning:input label="Name" value="{!v.simplerecord.name}"/>
+        <lightning:input label="StageName" value="{!v.simplerecord.stagename}"/>
+        <lightning:input label="CloseDate" value="{!v.simplerecord.closedate}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:attribute name="acc" type="Account" default="{sObject:'Account'}"/>
+    <aura:attribute name="con" type="Contact" default="{sObject:'Contact'}"/>
+    
+	<lightning:layout multipleRows="true">
+       <lightning:layoutItem size="12" padding="around-small">
+           <lightning:card title="Registration Page" iconName="utility:company">
+               <aura:set attribute="actions">
+                   <lightning:buttongroup>
+                       <lightning:button label="New"/>
+                       <lightning:button label="New Event"/>
+                       <lightning:button label="New Task"/>
+                  </lightning:buttongroup>
+              </aura:set>
+               First Name  : Gopal &nbsp; &nbsp; &nbsp; &nbsp;
+               Last Name   : Rao
+          </lightning:card>
+      </lightning:layoutItem>
+        
+        <lightning:layoutItem size="6" padding="around-small">
+            <lightning:card title="Account">
+                <lightning:input label="Name" value="{!v.acc.Name}"/>
+                <lightning:input label="Phone" value="{!v.acc.Phone}"/>
+                <lightning:input label="Rating" value="{!v.acc.Rating}"/>
+           </lightning:card>
+       </lightning:layoutItem>
+        
+         <lightning:layoutItem size="6" padding="around-small">
+            <lightning:card title="Contact">
+                <lightning:input label="FirstName" value="{!v.con.FirstName}"/>
+                <lightning:input label="LastName" value="{!v.con.LastName}"/>
+                <lightning:input label="Email" value="{!v.con.Email}"/>
+           </lightning:card>
+       </lightning:layoutItem> 
+   </lightning:layout>
+</aura:component>

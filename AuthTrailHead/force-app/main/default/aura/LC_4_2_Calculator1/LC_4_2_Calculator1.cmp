@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="first" type="integer"/>
+    <aura:attribute name="second" type="integer"/>
+    <aura:attribute name="result" type="integer"/>
+    <lightning:card title="Calculator" iconName="standard:record">
+        <aura:set attribute="actions">
+            <lightning:buttongroup>
+                <lightning:button label="sum" onclick="{!c.sum}"/>
+                <lightning:button label="mul" onclick="{!c.mul}"/>
+                <lightning:button label="sub" onclick="{!c.sub}"/>
+           </lightning:buttongroup>
+       </aura:set>
+        <lightning:input label="Enter first value" value="{!v.first}" required="true"/>
+        <lightning:input label="Enter second value" value="{!v.second}" required="true"/>
+        <lightning:input label="result" value="{!v.result}"/>
+   </lightning:card>
+    
+    <lightning:card title="call by auraid">
+        <aura:set attribute="footer">
+            <lightning:button label="divide" onclick="{!c.div}"/>
+       </aura:set>
+            <lightning:input label="enter first value" required="true" aura:id="v1"/>
+            <lightning:input label="enter second value" required="true" aura:id="v2"/>
+            <lightning:input label="output" aura:id="v3"/>
+    </lightning:card>
+</aura:component>

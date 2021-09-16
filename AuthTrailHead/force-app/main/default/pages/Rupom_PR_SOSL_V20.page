@@ -1,0 +1,21 @@
+<apex:page controller="Rupom_PR_SOSL_V20">
+    <apex:form >
+        <apex:pageBlock >
+           <apex:pageBlockSection >
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel >ENTER THE SEARCH TEXT</apex:outputLabel>
+                   <apex:inputText value="{!searchtext}" />    
+              </apex:pageBlockSectionItem>
+               <apex:commandButton value="search" action="{!dosearch}"/>
+          </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!results}" var="R">
+                    <apex:column value="{!R.name}"/>
+                    <apex:column value="{!R.email}"/>
+                    <apex:column value="{!R.phone}"/>
+               </apex:pageBlockTable>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

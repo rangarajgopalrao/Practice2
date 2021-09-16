@@ -1,0 +1,12 @@
+<aura:component controller="App_Event_Account_Search">
+    
+    <aura:handler event="c:Application_Event_Ex2" action="{!c.showme}"/>
+    
+    <aura:attribute name="acc" type="Account"/>
+    
+    <div class="box">
+        <lightning:input label="Account Name" value="{!v.acc.Name}"/>
+        <lightning:input label="Account Phone" value="{!v.acc.Phone}"/>
+        <lightning:input label="Account Industry" value="{!v.acc.Industry}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,27 @@
+<apex:page controller="CH_ACCOUNT_INFORM_EX1">
+    <apex:form >
+    <apex:pageBlock title="Wrapper Account">
+        <apex:pageBlockButtons >
+            <apex:commandButton value="submit" action="{!submit}"/>
+        </apex:pageBlockButtons>
+        <apex:dataTable value="{!AccWrap}" var="aw" width="100" cellpadding="2" cellspacing="10" border="frame">
+            <apex:column headerValue="select">
+                <apex:inputCheckbox value="{!aw.flag}"/>
+            </apex:column>
+            <apex:column headerValue="Name" value="{!aw.a.name}"/>
+            <apex:column headervalue="Type" value="{!aw.a.Type}"/>
+            <apex:column headervalue="Industry" value="{!aw.a.industry}"/>
+            <apex:column headervalue="Rating" value="{!aw.a.rating}"/>
+            
+        </apex:dataTable>
+        <apex:pageBlock title="Selected account">
+            <apex:dataTable value="{!selectedacc}" var="s" width="400" cellpadding="2" cellspacing="2" border="box">
+                <apex:column headervalue="name" value="{!s.name}"/>
+                <apex:column headervalue="type" value="{!s.type}"/>
+                <apex:column headervalue="industry" value="{!s.industry}"/>
+                <apex:column headervalue="rating" value="{!s.rating}"/>
+            </apex:dataTable>
+        </apex:pageBlock>
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

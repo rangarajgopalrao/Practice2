@@ -1,0 +1,24 @@
+<apex:page controller="Rupom_VF_AC_CAL">
+    <apex:form id="fm1">
+        <apex:pageBlock title="@@@CALCULATOR@@@">
+            <apex:pageBlockSection title="Calculator - Sum of Odd Or Even Numbers">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Number :" />
+                    <apex:inputText value="{!N}"/>
+                </apex:pageBlockSectionItem>
+                <apex:selectRadio value="{!CH}">
+                    <apex:selectOption itemLabel="Even" itemValue="SUMEVEN" />
+                    <apex:selectOption itemLabel="Odd" itemValue="SUMODD" />
+                    <apex:selectOption itemLabel="None" itemValue="NN" />
+                </apex:selectRadio>
+            
+            	<apex:commandButton value="Calculate" action="{!MainMhtd}" reRender="fm1"/>
+            
+                <apex:pageBlockSectionItem id="PBS1">
+                    <apex:outputLabel value="The Result Is :" />
+                    <apex:inputText value="{!Result}"/>
+                </apex:pageBlockSectionItem>
+ 			</apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

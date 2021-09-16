@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:registerEvent name="RegEvnt" type="c:LCEvent"/>
+    
+    <aura:attribute name="ChildValue" type="string" default="Aamir"/>
+    <!-- <lightning:input label="show child attribute value" value="{!v.ChildValue}"/> -->
+    
+    
+    <lightning:button label="fire event" onclick="{!c.firechildevent}"/>
+</aura:component>

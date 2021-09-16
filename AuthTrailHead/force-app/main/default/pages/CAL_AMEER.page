@@ -1,0 +1,62 @@
+<apex:page controller="CAL_AMEER">
+    <apex:form id="fm1">
+       <apex:pageBlock title="Calculation">
+           <apex:pageBlockSection title="Sum of Even or Odd">
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Enter the Nummber:"/>
+                   <apex:inputText value="{!Num}"/>
+               </apex:pageBlockSectionItem>
+               <apex:selectRadio value="{!Ch}">
+                   <apex:selectOption itemLabel="Even" itemValue="ev" />
+                    <apex:selectOption itemLabel="Odd" itemValue="od" />
+                     <apex:selectOption itemLabel="None" itemValue="nn" />
+               </apex:selectRadio>
+               <apex:commandButton value="Calculate" action="{!MainMhtd}" reRender="fm1"/>
+            <apex:pageBlockSectionItem id="pbs1">
+                <apex:outputLabel value="Result"/>
+                <apex:inputText value="{!Result}"/>
+               </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+           <apex:pageBlockSection title="Area Calculator" columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Length :" />
+                    <apex:inputText value="{!Le}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Bredth :" />
+                    <apex:inputText value="{!Br}"/>
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter The Height :" />
+                    <apex:inputText value="{!He}"/>
+                  </apex:pageBlockSectionItem> 
+                 <apex:selectRadio value="{!Chs}">
+                    <apex:selectOption itemLabel="Rectangle" itemValue="Rect" />
+                    <apex:selectOption itemLabel="Triangle" itemValue="Tri" />
+                    <apex:selectOption itemLabel="Trapzium" itemValue="Trap" />
+                </apex:selectRadio>
+                     
+                     <apex:commandButton value="Calculate" action="{!MainShape}" reRender="fm1"/>
+            
+                <apex:pageBlockSectionItem id="Pbs2">
+                    <apex:outputLabel value="The Result Is :" />
+                    <apex:inputText value="{!Results}"/>
+                </apex:pageBlockSectionItem>
+               
+       		</apex:pageBlockSection>
+           <apex:pageBlockSection title="Factorial">
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Enter the Number:"/>
+                   <apex:inputText value="{!Fact}"/>
+               </apex:pageBlockSectionItem>
+              
+               <apex:pageBlockSectionItem id="Pbs3">
+                    <apex:outputLabel value="The Result Is :" />
+                    <apex:inputText value="{!ResultF}"/>
+                   
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="Calculate" action="{!MainFact}" reRender="fm1"/>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

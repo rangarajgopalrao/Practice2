@@ -1,0 +1,17 @@
+<apex:page controller="ProductClassWrapper">
+    <apex:form >
+        <apex:pageBlock title="Product Wrapper">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Submit" action="{!Submit}"/>
+           </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!ProdWrap}" var="pr">
+                <apex:column headerValue="produact name" value="{!pr.prodname}"/>
+                <apex:column headerValue="produact CODE" value="{!pr.prodcode}"/>
+                <apex:column headerValue="produact PRICE" value="{!pr.prodprice}"/>
+           </apex:pageBlockTable>
+       </apex:pageBlock>
+        <apex:pageBlock title="product2">
+            {!ProdWrap2}
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<apex:page controller="ActionFunctionClass" id="pg">
+    <script>
+         function validateinput(){
+             var AccType = document.getElementById('pg:fom:pb:pbs1:type').value;
+             var AccCity = document.getElementById('pg:fom:pb:pbs2:city').value;
+             var AccState = document.getElementById('pg:fom:pb:pbs2:state').value;
+             var AccCountry = document.getElementById('pg:fom:pb:pbs2:country').value;
+             if(AccType=='prospect' && (AccCity==''|| AccState=='' || AccCountry=='')){
+             	alert('billing county,city,state fields needed');
+             }
+             else{
+               callsave();
+             }
+         }
+    </script>
+    <apex:form id="fom">
+        <apex:actionFunction name="callsave" action="{!saveAccount}"/>
+        <apex:pageBlock title="Account Record" id="pb">
+            <apex:pageBlockSection id="pbs1" title="Account Info">
+                <apex:inputField value="{!acc.type}" id="type"/>
+                <apex:inputField value="{!acc.name}"/>
+                <apex:inputField value="{!acc.industry}"/>
+                <apex:inputField value="{!acc.rating}"/>
+                <apex:inputField value="{!acc.phone}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="pbs2" title="Billing Address Info">
+                <apex:inputField id="city" value="{!acc.billingcity}"/>
+                <apex:inputField id="state" value="{!acc.billingstate}"/>
+                <apex:inputField id="country" value="{!acc.billingcountry}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+            <apex:commandButton value="save" onclick="validateinput();return false;"/>
+           </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

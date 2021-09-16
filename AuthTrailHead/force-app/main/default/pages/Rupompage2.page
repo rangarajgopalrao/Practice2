@@ -1,0 +1,89 @@
+<apex:page sidebar="false" showHeader="false" >
+    <style>
+      body
+     	 {
+       		background-color: #F110CF;
+      		border style: double;
+      		border width: 5px;
+      		
+     	 }
+      h1
+      	{
+      		font-size: 30px;
+      		color: #EFE107;
+      		margin-left: 350px;
+      		margin-top: 500px;
+      	}
+      .box
+      	{
+      		margin-left: 350px;
+      		margin-top: 200px;
+      		margin-right: 350px;
+      		border-style: solid;
+      	}
+      .Rupom
+      	{
+      		color: #EFE107;
+      	}
+        
+ </style> 
+    <h1>Welcome to Spice jet</h1>
+    <apex:image url="https://www.hrkatha.com/wp-content/uploads/2018/06/3138c7366a6ecdf59187027501010d24-696x391.jpg" width="1300px"/>
+    <apex:flash src="{!$Resource.fimg}" height="200px" width="200px"></apex:flash>
+   <p></p>
+    <apex:outputLink value="https://www.spicejet.com/">
+        Click here to go to Spicejet home page
+   </apex:outputLink>
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+            <apex:pageBlockSection title="Area calculator">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter length :"/>
+                   	<apex:inputText />
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter breadth :"/>
+                   	<apex:inputText />
+               </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result :"/>
+                    <apex:outputText />
+               </apex:pageBlockSectionItem>
+                <p></p>
+                <apex:commandButton value="Submit"/>
+           </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Greater or smaller of 3 numbers">
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Enter first number----->"/> 
+                  <apex:inputText />
+             </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Enter second number----->"/> 
+                  <apex:inputText />
+             </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Enter third number----->"/> 
+                  <apex:inputText />
+             </apex:pageBlockSectionItem>
+                <p></p>
+                <apex:selectRadio label="Please select the action" title="Please select one option">
+                    <apex:selectOption itemLabel="Greater" itemValue="G" />
+                    <apex:selectOption itemLabel="Smaller" itemValue="S" />
+               </apex:selectRadio>
+                
+                <p></p>
+                <apex:commandButton value="Calculate"/>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="The Result is ----->"/> 
+                    <apex:outputText />
+             </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Enter the comments----->"/> 
+                  <apex:inputTextarea cols="40" rows="20" />
+             </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+         </apex:pageBlock>
+   </apex:form>
+</apex:page>

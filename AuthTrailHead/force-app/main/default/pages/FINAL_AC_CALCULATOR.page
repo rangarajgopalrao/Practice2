@@ -1,0 +1,76 @@
+<apex:page controller="FINAL_AC_CALCULATOR">
+   <apex:form id="refresh">
+    <apex:pageBlock title="@@CALCULATOR@@">
+        <apex:pageBlockSection title="AREA" columns="1">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="LENGTH : "/>
+                <apex:inputText value="{!L}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:selectRadio value="{!CHS}" >
+                <apex:selectOption itemLabel="RECTANGLE" value="{!REC}"/>
+                <apex:selectOption itemLabel="TRIANGLE" value="{!TRI}"/>
+                <apex:selectOption itemLabel="TRAPEZIUM" value="{!TRP}"/>
+           </apex:selectRadio>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="WIDTH : "/>
+            	<apex:inputText value="{!B}"/>     
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="RESULT : "/>
+                <apex:inputText value="{!R}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="HEIGHT : "/> 
+                <apex:inputText value="{!H}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:commandButton value="CALCULATE" action="{!METHOD1}" reRender="refresh"/>
+            
+       </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="SUM EV or OD" columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="NUMBER : "/>
+                <apex:inputText value="{!N}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:selectRadio value="{!CH}">
+                <apex:selectOption itemLabel="EVEN" itemValue="{!EV}"/>
+                <apex:selectOption itemLabel="ODD" itemValue="{!OD}"/>
+                <apex:selectOption itemLabel="NONE" itemValue="{!NN}"/>
+           </apex:selectRadio>
+            
+            <apex:commandButton value="CALCULATE" action="{!METHOD2}" reRender="refresh"/>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="sum of even/odd result is : "/>
+                <apex:inputText value="{!RESULT}"/>
+           </apex:pageBlockSectionItem>
+            
+            
+       </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="FACTORIAL">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="NUMBER : "/>
+                <apex:inputText value="{!N}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="RESULT : "/>
+                <apex:inputText value="{!RF}"/>
+           </apex:pageBlockSectionItem>
+            
+            <apex:commandButton value="CALCULATE" action="{!METHOD3}" reRender="refresh"/>
+            
+       </apex:pageBlockSection>
+        
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

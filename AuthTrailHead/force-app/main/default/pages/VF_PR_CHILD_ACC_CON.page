@@ -1,0 +1,20 @@
+<apex:page controller="PR_CHILD_ACC_CON">
+    <apex:form >
+        <apex:pageBlock title="Accounts">
+          <apex:pageBlockTable value="{!Accounts}" var="a">
+              <apex:column value="{!a.name}"/>
+               <apex:column value="{!a.phone}"/>
+               <apex:column value="{!a.industry}"/>
+               <apex:column value="{!a.rating}"/>
+              
+              <apex:column headerValue="contacts">
+              <apex:dataTable value="{!Con}" var="b">
+                  <apex:column value="{!b.LastName}"/>
+                  <apex:column value="{!b.FirstName}"/>
+                  </apex:dataTable>
+              </apex:column>
+              
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

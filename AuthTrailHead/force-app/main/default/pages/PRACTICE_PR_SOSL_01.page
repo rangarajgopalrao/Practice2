@@ -1,0 +1,20 @@
+<apex:page controller="PRACTICE_PR_SOSL_01" showHeader="false">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Enter serch name"/>
+                <apex:inputText value="{!searchsum}"/>
+           </apex:pageBlockSectionItem>
+            <apex:commandButton value="sanka" action="{!cansearch}"/>
+       </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+           <apex:pageBlockTable value="{!output}" var="s">
+               <apex:column value="{!s.phone}"/>
+               <apex:column value="{!s.name}"/>
+               <apex:column value="{!s.fax}"/>
+          </apex:pageBlockTable>
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

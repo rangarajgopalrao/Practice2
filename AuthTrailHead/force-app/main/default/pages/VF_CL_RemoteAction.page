@@ -1,0 +1,30 @@
+<apex:page controller="CL_RemoteAction_Child">
+    <script>
+    alert('called 1');
+    	function goodnight(hi)
+   			 {
+                 alert('called me');
+                 CL_RemoteAction_Child.goodmorning(hi, function(result, event){
+                     
+                     	alert('called 2');
+                                                if(event.status){
+                     								document.getElementById("result").innerHTML = result;
+                 								}
+                                                
+                                                });
+        
+  			 }
+    </script>
+    <button onclick="goodnight('Gopal');">
+        button
+    </button>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div id="result">
+        [result]
+    </div>
+</apex:page>

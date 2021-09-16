@@ -1,0 +1,32 @@
+<aura:component >
+	<lightning:card iconName="standard:account">
+       <aura:set attribute="title">
+           Account <br></br>
+           Recently Viewed
+           <lightning:buttonmenu iconName="utility:down" alternativeText="down">
+               <lightning:menuitem label="ALL Accounts"/>
+               <lightning:menuitem label="My Accounts"/>
+               <lightning:menuitem label="New Last Week"/>
+               <lightning:menuitem label="New This Week"/>
+               <lightning:menuitem label="Platinum and Gold SLA customers"/>
+               <lightning:menuitem label="Recently Viewed(Pinned List)"/>
+               <lightning:menuitem label="Recently Viewed Accounts"/>
+           </lightning:buttonmenu>
+           <lightning:buttonicon iconName="utility:pinned" alternativetext="notification" size="Large"/>
+      </aura:set>
+        
+        
+        <aura:set attribute="actions">
+        	<lightning:buttongroup>
+                <lightning:button label="New"/>
+                <lightning:button label="Owner"/>
+           </lightning:buttongroup>
+       </aura:set>
+        
+        <aura:set attribute="footer">
+            <lightning:buttonicon iconName="utility:search"/>
+            <lightning:buttonicon iconName="utility:refresh"/>
+            <lightning:buttonicon iconName="utility:edit"/>
+       </aura:set>
+    </lightning:card>
+</aura:component>

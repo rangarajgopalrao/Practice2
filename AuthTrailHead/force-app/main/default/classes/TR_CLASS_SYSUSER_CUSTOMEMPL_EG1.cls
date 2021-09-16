@@ -1,0 +1,3 @@
+public class TR_CLASS_SYSUSER_CUSTOMEMPL_EG1 {
+
+}

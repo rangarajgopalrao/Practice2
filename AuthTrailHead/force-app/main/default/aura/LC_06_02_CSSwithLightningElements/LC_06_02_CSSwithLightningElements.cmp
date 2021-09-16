@@ -1,0 +1,16 @@
+<aura:component >
+	<div class="myclass">
+        <lightning:card title="utility:company" class="lightclass">
+            <aura:set attribute="title">
+                <h1>ICICI Bank</h1>
+                <h2>Interest Calculator</h2>
+            </aura:set>
+            <div class="inBox">
+                <lightning:input label="Account"  class="lightclass"/> <br/>
+                <lightning:input label="Rate of Interest"/> <br/>
+                <lightning:input label="Year"/> <br/>
+                Hi How Are You
+            </div>
+        </lightning:card>
+    </div>
+</aura:component>

@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top" dir="RTL">
+                <apex:commandButton value="Calculate"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

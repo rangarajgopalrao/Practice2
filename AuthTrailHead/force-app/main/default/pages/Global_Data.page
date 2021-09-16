@@ -1,0 +1,9 @@
+<apex:page >
+    {!$User.LastName}<br/>
+    {!$Organization.Name} <br/>
+    <h2>
+        Above both fields are Standard fields can be called with out writting SOQL <br/>
+        but custom fields it's difficult to called using doller($).<br/>
+        if u want to call custom field with out writting SOQL use Custom setting 
+    </h2>
+</apex:page>

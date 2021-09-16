@@ -1,0 +1,27 @@
+<apex:page controller="SOQL_EX7">
+    <apex:form id="pb">
+        <apex:pageBlock title="List of Leads">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="callMe" action="{!callMe}" reRender="pb"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Phone"/>
+                    <apex:inputText value="{!phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Email"/>
+                    <apex:inputText value="{!email}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockTable value="{!leads}" var="l">
+                <apex:column value="{!l.LastName}"/>
+                <apex:column value="{!l.FirstName}"/>
+                <apex:column value="{!l.phone}"/>
+                <apex:column value="{!l.email}"/>
+         </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

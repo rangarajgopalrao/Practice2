@@ -1,0 +1,14 @@
+<apex:page controller="SOQL_SERACHDAT_EX4_SATHISH">
+    <apex:form >
+        <apex:pageBlock title="LIST OF ACCOUNT">
+            <apex:inputText value="{!searchdata}"/>
+            <apex:commandButton value="get" action="{!getallaccounts}"/>
+            <apex:dataTable value="{!acc}" var="a" border="frame" cellpadding="10" rendered="{! !isnull(acc)}">
+                <apex:column headerValue="Name" value="{!a.name}"/>
+                <apex:column headerValue="Industry" value="{!a.industry}"/>
+                <apex:column headerValue="Phone" value="{!a.phone}"/>
+                <apex:column headerValue="Rating" value="{!a.rating}"/>
+           </apex:dataTable>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page controller="DisplayVFNamesDropDownController">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:selectList value="{!selectedVF}" size="1" multiselect="false" onchange="{!SelectedValue}" >
+                <apex:selectOptions value="{!VisualforcePages}" />
+                <apex:actionSupport event="onchange" reRender="selectedPageId" action="{!getSelectedValue}"/>
+            </apex:selectList>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="selectedPageId">
+            Selected Page: {!selectedVF}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

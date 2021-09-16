@@ -1,0 +1,16 @@
+<apex:page >
+    {! 10}<br/>
+    {! 20+78}<br/>
+    {! 'gopal'+'kishan'}<br/>
+    {! isnull(10)}<br/>
+    
+    {! 10/10}<br/>
+    {! 10*956}<br/>
+    {! 'gopal goal is to get job asap'}<br/>
+    {! isnull(0)}<br/>
+    
+    {! 1984/10}<br/>
+    {! 10-966}<br/>
+    {! 'my goal is to get job asap'}<br/>
+    {! (8)}<br/>
+</apex:page>

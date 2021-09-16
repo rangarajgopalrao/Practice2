@@ -1,0 +1,7 @@
+<apex:page >
+    <apex:form >
+    <apex:selectRadio >
+        <apex:selectOption itemLabel="ABC" itemValue="EFG"/>
+   </apex:selectRadio>
+  </apex:form>
+</apex:page>

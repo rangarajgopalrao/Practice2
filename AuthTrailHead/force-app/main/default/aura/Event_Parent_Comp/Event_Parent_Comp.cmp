@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="myName" type="string"/>
+    <aura:handler name="myEvent" event="c:First_Example" action="{!c.callme}"/>
+    
+    Name : {!v.myName} <br/>
+    <c:Event_Child_Comp/>
+</aura:component>
