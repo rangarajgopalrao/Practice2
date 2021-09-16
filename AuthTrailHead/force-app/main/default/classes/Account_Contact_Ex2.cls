@@ -1,5 +1,6 @@
 public class Account_Contact_Ex2 
 {
+    // git changes adding to develop2 branch
 	@AuraEnabled
     public Static string createAcc(string name,string rating,string phone)
     {
